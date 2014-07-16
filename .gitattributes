@@ -1,4 +1,5 @@
 * text=auto !eol
+/MANIFEST -text
 bin/bin/atk2style.cfg -text
 bin/bin/logging.properties -text
 bin/bin/rtegen -text
@@ -41,8 +42,7 @@ bin/lib/org.eclipse.ocl_3.3.0.v20130909-1552.jar -text
 bin/lib/org.eclipse.osgi_3.9.1.v20130814-1242.jar -text
 bin/lib/runtime_registry_compatibility.jar -text
 bin/model/Rte_InternalDataTypes.arxml -text
-bin/schema/AUTOSAR_4-0-3_STRICT_COMPACT.xsd -text
-bin/schema/xml.xsd -text
+bin/schema/MANIFEST -text
 ecu_extractor/ecu_extractor.rb -text
 ecu_extractor/readme.txt -text
 /readme.txt -text
@@ -52,8 +52,10 @@ sample/general/EcuM/EcuM.h -text
 sample/general/EcuM/EcuM_Callout.h -text
 sample/general/EcuM/EcuM_Cbk.h -text
 sample/general/EcuM/EcuM_StartupTask.c -text
+sample/general/EcuM/MANIFEST -text
 sample/general/EcuM/Os_Hook.c -text
 sample/general/HelloAutosar/HA_TopLevel.png -text
+sample/general/HelloAutosar/MANIFEST -text
 sample/general/HelloAutosar/SWC1.c -text
 sample/general/HelloAutosar/SWC1_MemMap.h -text
 sample/general/HelloAutosar/SWC2.c -text
@@ -83,6 +85,7 @@ sample/sc1-mc/HelloAutosarWithCom/ecu1/HelloAutosarWithCom_ECU1.yaml -text
 sample/sc1-mc/HelloAutosarWithCom/ecu1/configure.sh -text
 sample/sc1-mc/HelloAutosarWithCom/ecu2/HelloAutosarWithCom_ECU2.yaml -text
 sample/sc1-mc/HelloAutosarWithCom/ecu2/configure.sh -text
+sample/sc1-mc/MANIFEST -text
 sample/sc1/AutoWiperController/AWCTopLevel.png -text
 sample/sc1/AutoWiperController/AutoWiperController.c -text
 sample/sc1/AutoWiperController/AutoWiperController.yaml -text
@@ -103,6 +106,7 @@ sample/sc1/HelloAutosarWithCom/ecu1/HelloAutosarWithCom_ECU1.yaml -text
 sample/sc1/HelloAutosarWithCom/ecu1/configure.sh -text
 sample/sc1/HelloAutosarWithCom/ecu2/HelloAutosarWithCom_ECU2.yaml -text
 sample/sc1/HelloAutosarWithCom/ecu2/configure.sh -text
+sample/sc1/MANIFEST -text
 sample/sc1/PowerWindowController/CddButton.c -text
 sample/sc1/PowerWindowController/CddButton_MemMap.h -text
 sample/sc1/PowerWindowController/CddWindow.c -text
@@ -151,12 +155,14 @@ sample/sc3-mc/HelloAutosarWithCom/ecu1/HelloAutosarWithCom_ECU1.yaml -text
 sample/sc3-mc/HelloAutosarWithCom/ecu1/configure.sh -text
 sample/sc3-mc/HelloAutosarWithCom/ecu2/HelloAutosarWithCom_ECU2.yaml -text
 sample/sc3-mc/HelloAutosarWithCom/ecu2/configure.sh -text
+sample/sc3-mc/MANIFEST -text
 sample/sc3/HelloAutosar/HelloAutosar.yaml -text
 sample/sc3/HelloAutosar/configure.sh -text
 sample/sc3/HelloAutosarWithCom/ecu1/HelloAutosarWithCom_ECU1.yaml -text
 sample/sc3/HelloAutosarWithCom/ecu1/configure.sh -text
 sample/sc3/HelloAutosarWithCom/ecu2/HelloAutosarWithCom_ECU2.yaml -text
 sample/sc3/HelloAutosarWithCom/ecu2/configure.sh -text
+sample/sc3/MANIFEST -text
 src/cleanup.xml -text
 src/codingstyle.xml -text
 src/com.google.guava/.classpath -text
