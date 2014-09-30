@@ -5,7 +5,7 @@
 #
 #  Copyright (C) 2013-2014 by Center for Embedded Computing Systems
 #              Graduate School of Information Science, Nagoya Univ., JAPAN
-#  Copyright (C) 2013-2014 by FUJISOFT INCORPORATED, JAPAN
+#  Copyright (C) 2013-2014 by FUJI SOFT INCORPORATED, JAPAN
 #  Copyright (C) 2013-2014 by Panasonic Advanced Technology Development Co., Ltd., JAPAN
 #  Copyright (C) 2013-2014 by Renesas Electronics Corporation, JAPAN
 #  Copyright (C) 2013-2014 by Sunny Giken Inc., JAPAN
@@ -107,4 +107,4 @@ perl $OS_PATH/configure -T $TARGET -A Rte $CFG_OPT \
 ruby $OS_PATH/utils/abrex/abrex.rb $APPLICATION.yaml
 
 # A-RTEGENによるA-RTEモジュール作成
-../../../bin/bin/rtegen $OS_PATH/target/$TARGET/target_hw_counter.arxml $GENERAL_PATH/HelloAutosar/SystemDesk.arxml $APPLICATION.arxml
+../../../bin/bin/rtegen.sh $OS_PATH/target/$TARGET/target_hw_counter.arxml $GENERAL_PATH/HelloAutosar/SystemDesk.arxml $APPLICATION.arxml

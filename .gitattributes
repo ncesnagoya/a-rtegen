@@ -4,6 +4,7 @@ bin/bin/atk2style.cfg -text
 bin/bin/logging.properties -text
 bin/bin/rtegen -text
 bin/bin/rtegen.bat -text
+bin/bin/rtegen.sh -text
 bin/bin/uncrustify.exe -text
 bin/lib/ST-4.0.7.jar -text
 bin/lib/args4j-2.0.25.jar -text
@@ -11,10 +12,15 @@ bin/lib/com.google.guava_14.0.1.jar -text
 bin/lib/com.ibm.icu_50.1.1.v201304230130.jar -text
 bin/lib/guava-14.0.1.jar -text
 bin/lib/jp.ac.nagoya_u.is.nces.a_rte.app_1.0.0.201403250848.jar -text
+bin/lib/jp.ac.nagoya_u.is.nces.a_rte.app_1.0.1.201409031444.jar -text
 bin/lib/jp.ac.nagoya_u.is.nces.a_rte.codegen_1.0.0.201403250848.jar -text
+bin/lib/jp.ac.nagoya_u.is.nces.a_rte.codegen_1.0.1.201408211459.jar -text
 bin/lib/jp.ac.nagoya_u.is.nces.a_rte.m2m_1.0.0.201403250848.jar -text
+bin/lib/jp.ac.nagoya_u.is.nces.a_rte.m2m_1.0.1.201408211459.jar -text
 bin/lib/jp.ac.nagoya_u.is.nces.a_rte.model_1.0.0.201403250848.jar -text
+bin/lib/jp.ac.nagoya_u.is.nces.a_rte.model_1.0.1.201408211459.jar -text
 bin/lib/jp.ac.nagoya_u.is.nces.a_rte.persist_1.0.0.201403250848.jar -text
+bin/lib/jp.ac.nagoya_u.is.nces.a_rte.persist_1.0.1.201408211459.jar -text
 bin/lib/lpg.runtime.java_2.0.17.v201004271640.jar -text
 bin/lib/org.eclipse.acceleo.common_3.4.1.201309031307.jar -text
 bin/lib/org.eclipse.acceleo.engine_3.4.1.201309031307.jar -text
@@ -188,6 +194,7 @@ src/jp.ac.nagoya_u.is.nces.a_rte.app/resources/bin/atk2style.cfg -text
 src/jp.ac.nagoya_u.is.nces.a_rte.app/resources/bin/logging.properties -text
 src/jp.ac.nagoya_u.is.nces.a_rte.app/resources/bin/rtegen -text
 src/jp.ac.nagoya_u.is.nces.a_rte.app/resources/bin/rtegen.bat -text
+src/jp.ac.nagoya_u.is.nces.a_rte.app/resources/bin/rtegen.sh -text
 src/jp.ac.nagoya_u.is.nces.a_rte.app/resources/bin/uncrustify.exe -text
 src/jp.ac.nagoya_u.is.nces.a_rte.app/resources/model/Rte_InternalDataTypes.arxml -text
 src/jp.ac.nagoya_u.is.nces.a_rte.app/resources/schema/AUTOSAR_4-0-3_STRICT_COMPACT.xsd -text
