@@ -248,6 +248,7 @@ src/jp.ac.nagoya_u.is.nces.a_rte.app/resources/bin/rtegen.sh -text
 src/jp.ac.nagoya_u.is.nces.a_rte.app/resources/bin/uncrustify.exe -text
 src/jp.ac.nagoya_u.is.nces.a_rte.app/resources/model/Rte_InternalDataTypes.arxml -text
 src/jp.ac.nagoya_u.is.nces.a_rte.app/resources/schema/AUTOSAR_4-0-3_STRICT_COMPACT.xsd -text
+src/jp.ac.nagoya_u.is.nces.a_rte.app/resources/schema/README.txt -text
 src/jp.ac.nagoya_u.is.nces.a_rte.app/resources/schema/xml.xsd -text
 src/jp.ac.nagoya_u.is.nces.a_rte.app/src/jp/ac/nagoya_u/is/nces/a_rte/app/AppException.java -text
 src/jp.ac.nagoya_u.is.nces.a_rte.app/src/jp/ac/nagoya_u/is/nces/a_rte/app/AppResources.java -text
