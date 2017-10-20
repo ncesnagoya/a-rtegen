@@ -394,7 +394,7 @@ Ecuc:
 
     WdgSettingsConfig_0:
       DefinitionRef: WdgSettingsConfig
-      WdgDefaultMode: WDG_SLOW_MODE
+      WdgDefaultMode: WDGIF_FAST_MODE
       WdgSettingsFast:
         WdgTriggerMode: WDG_TOGGLE
         WdgTimeout: 5.0
