@@ -689,7 +689,6 @@ src/jp.ac.nagoya_u.is.nces.a_rte.model/src/jp/ac/nagoya_u/is/nces/a_rte/model/ar
 src/jp.ac.nagoya_u.is.nces.a_rte.model/src/jp/ac/nagoya_u/is/nces/a_rte/model/ar4x/m2/VariableAccess.java -text
 src/jp.ac.nagoya_u.is.nces.a_rte.model/src/jp/ac/nagoya_u/is/nces/a_rte/model/ar4x/m2/VariableDataPrototype.java -text
 src/jp.ac.nagoya_u.is.nces.a_rte.model/src/jp/ac/nagoya_u/is/nces/a_rte/model/ar4x/m2/VariableDataPrototypeInSystemInstanceRef.java -text
-src/jp.ac.nagoya_u.is.nces.a_rte.model/src/jp/ac/nagoya_u/is/nces/a_rte/model/ar4x/m2/VariableInAtomicSwcInstanceRef.java -text
 src/jp.ac.nagoya_u.is.nces.a_rte.model/src/jp/ac/nagoya_u/is/nces/a_rte/model/ar4x/m2/impl/AnyInstanceRefImpl.java -text
 src/jp.ac.nagoya_u.is.nces.a_rte.model/src/jp/ac/nagoya_u/is/nces/a_rte/model/ar4x/m2/impl/ApplicationDataTypeImpl.java -text
 src/jp.ac.nagoya_u.is.nces.a_rte.model/src/jp/ac/nagoya_u/is/nces/a_rte/model/ar4x/m2/impl/ApplicationErrorImpl.java -text
@@ -832,7 +831,6 @@ src/jp.ac.nagoya_u.is.nces.a_rte.model/src/jp/ac/nagoya_u/is/nces/a_rte/model/ar
 src/jp.ac.nagoya_u.is.nces.a_rte.model/src/jp/ac/nagoya_u/is/nces/a_rte/model/ar4x/m2/impl/VariableAccessImpl.java -text
 src/jp.ac.nagoya_u.is.nces.a_rte.model/src/jp/ac/nagoya_u/is/nces/a_rte/model/ar4x/m2/impl/VariableDataPrototypeImpl.java -text
 src/jp.ac.nagoya_u.is.nces.a_rte.model/src/jp/ac/nagoya_u/is/nces/a_rte/model/ar4x/m2/impl/VariableDataPrototypeInSystemInstanceRefImpl.java -text
-src/jp.ac.nagoya_u.is.nces.a_rte.model/src/jp/ac/nagoya_u/is/nces/a_rte/model/ar4x/m2/impl/VariableInAtomicSwcInstanceRefImpl.java -text
 src/jp.ac.nagoya_u.is.nces.a_rte.model/src/jp/ac/nagoya_u/is/nces/a_rte/model/ar4x/m2/util/M2AdapterFactory.java -text
 src/jp.ac.nagoya_u.is.nces.a_rte.model/src/jp/ac/nagoya_u/is/nces/a_rte/model/ar4x/m2/util/M2ModelUtils.java -text
 src/jp.ac.nagoya_u.is.nces.a_rte.model/src/jp/ac/nagoya_u/is/nces/a_rte/model/ar4x/m2/util/M2Switch.java -text
@@ -920,8 +918,6 @@ src/jp.ac.nagoya_u.is.nces.a_rte.model/src/jp/ac/nagoya_u/is/nces/a_rte/model/rt
 src/jp.ac.nagoya_u.is.nces.a_rte.model/src/jp/ac/nagoya_u/is/nces/a_rte/model/rte/interaction/EntityStartImplementation.java -text
 src/jp.ac.nagoya_u.is.nces.a_rte.model/src/jp/ac/nagoya_u/is/nces/a_rte/model/rte/interaction/EntityStartInteraction.java -text
 src/jp.ac.nagoya_u.is.nces.a_rte.model/src/jp/ac/nagoya_u/is/nces/a_rte/model/rte/interaction/EntityStarter.java -text
-src/jp.ac.nagoya_u.is.nces.a_rte.model/src/jp/ac/nagoya_u/is/nces/a_rte/model/rte/interaction/Event.java -text
-src/jp.ac.nagoya_u.is.nces.a_rte.model/src/jp/ac/nagoya_u/is/nces/a_rte/model/rte/interaction/EventToTaskMapping.java -text
 src/jp.ac.nagoya_u.is.nces.a_rte.model/src/jp/ac/nagoya_u/is/nces/a_rte/model/rte/interaction/ExternalEcuReceiver.java -text
 src/jp.ac.nagoya_u.is.nces.a_rte.model/src/jp/ac/nagoya_u/is/nces/a_rte/model/rte/interaction/ExternalEcuSender.java -text
 src/jp.ac.nagoya_u.is.nces.a_rte.model/src/jp/ac/nagoya_u/is/nces/a_rte/model/rte/interaction/FilterBufferImplementation.java -text
@@ -939,8 +935,6 @@ src/jp.ac.nagoya_u.is.nces.a_rte.model/src/jp/ac/nagoya_u/is/nces/a_rte/model/rt
 src/jp.ac.nagoya_u.is.nces.a_rte.model/src/jp/ac/nagoya_u/is/nces/a_rte/model/rte/interaction/InternalEcuSender.java -text
 src/jp.ac.nagoya_u.is.nces.a_rte.model/src/jp/ac/nagoya_u/is/nces/a_rte/model/rte/interaction/IocSendImplementation.java -text
 src/jp.ac.nagoya_u.is.nces.a_rte.model/src/jp/ac/nagoya_u/is/nces/a_rte/model/rte/interaction/IocValueBufferImplementation.java -text
-src/jp.ac.nagoya_u.is.nces.a_rte.model/src/jp/ac/nagoya_u/is/nces/a_rte/model/rte/interaction/ModeSwitchEvent.java -text
-src/jp.ac.nagoya_u.is.nces.a_rte.model/src/jp/ac/nagoya_u/is/nces/a_rte/model/rte/interaction/ModeSwitchTriggeringEntityStartImplementation.java -text
 src/jp.ac.nagoya_u.is.nces.a_rte.model/src/jp/ac/nagoya_u/is/nces/a_rte/model/rte/interaction/OsEventSetEntityStarter.java -text
 src/jp.ac.nagoya_u.is.nces.a_rte.model/src/jp/ac/nagoya_u/is/nces/a_rte/model/rte/interaction/OsTaskActivateEntityStarter.java -text
 src/jp.ac.nagoya_u.is.nces.a_rte.model/src/jp/ac/nagoya_u/is/nces/a_rte/model/rte/interaction/PeriodicComSendProxy.java -text
@@ -955,7 +949,6 @@ src/jp.ac.nagoya_u.is.nces.a_rte.model/src/jp/ac/nagoya_u/is/nces/a_rte/model/rt
 src/jp.ac.nagoya_u.is.nces.a_rte.model/src/jp/ac/nagoya_u/is/nces/a_rte/model/rte/interaction/SendInteraction.java -text
 src/jp.ac.nagoya_u.is.nces.a_rte.model/src/jp/ac/nagoya_u/is/nces/a_rte/model/rte/interaction/Sender.java -text
 src/jp.ac.nagoya_u.is.nces.a_rte.model/src/jp/ac/nagoya_u/is/nces/a_rte/model/rte/interaction/StartOffsetCounterImplementation.java -text
-src/jp.ac.nagoya_u.is.nces.a_rte.model/src/jp/ac/nagoya_u/is/nces/a_rte/model/rte/interaction/TimingEvent.java -text
 src/jp.ac.nagoya_u.is.nces.a_rte.model/src/jp/ac/nagoya_u/is/nces/a_rte/model/rte/interaction/TimingTriggeringEntityStartImplementation.java -text
 src/jp.ac.nagoya_u.is.nces.a_rte.model/src/jp/ac/nagoya_u/is/nces/a_rte/model/rte/interaction/TrustedFunctionComSendImplementation.java -text
 src/jp.ac.nagoya_u.is.nces.a_rte.model/src/jp/ac/nagoya_u/is/nces/a_rte/model/rte/interaction/TrustedFunctionRteSendImplementation.java -text
@@ -972,8 +965,6 @@ src/jp.ac.nagoya_u.is.nces.a_rte.model/src/jp/ac/nagoya_u/is/nces/a_rte/model/rt
 src/jp.ac.nagoya_u.is.nces.a_rte.model/src/jp/ac/nagoya_u/is/nces/a_rte/model/rte/interaction/impl/EntityStartImplementationImpl.java -text
 src/jp.ac.nagoya_u.is.nces.a_rte.model/src/jp/ac/nagoya_u/is/nces/a_rte/model/rte/interaction/impl/EntityStartInteractionImpl.java -text
 src/jp.ac.nagoya_u.is.nces.a_rte.model/src/jp/ac/nagoya_u/is/nces/a_rte/model/rte/interaction/impl/EntityStarterImpl.java -text
-src/jp.ac.nagoya_u.is.nces.a_rte.model/src/jp/ac/nagoya_u/is/nces/a_rte/model/rte/interaction/impl/EventImpl.java -text
-src/jp.ac.nagoya_u.is.nces.a_rte.model/src/jp/ac/nagoya_u/is/nces/a_rte/model/rte/interaction/impl/EventToTaskMappingImpl.java -text
 src/jp.ac.nagoya_u.is.nces.a_rte.model/src/jp/ac/nagoya_u/is/nces/a_rte/model/rte/interaction/impl/ExternalEcuReceiverImpl.java -text
 src/jp.ac.nagoya_u.is.nces.a_rte.model/src/jp/ac/nagoya_u/is/nces/a_rte/model/rte/interaction/impl/ExternalEcuSenderImpl.java -text
 src/jp.ac.nagoya_u.is.nces.a_rte.model/src/jp/ac/nagoya_u/is/nces/a_rte/model/rte/interaction/impl/FilterBufferImplementationImpl.java -text
@@ -991,8 +982,6 @@ src/jp.ac.nagoya_u.is.nces.a_rte.model/src/jp/ac/nagoya_u/is/nces/a_rte/model/rt
 src/jp.ac.nagoya_u.is.nces.a_rte.model/src/jp/ac/nagoya_u/is/nces/a_rte/model/rte/interaction/impl/InternalEcuSenderImpl.java -text
 src/jp.ac.nagoya_u.is.nces.a_rte.model/src/jp/ac/nagoya_u/is/nces/a_rte/model/rte/interaction/impl/IocSendImplementationImpl.java -text
 src/jp.ac.nagoya_u.is.nces.a_rte.model/src/jp/ac/nagoya_u/is/nces/a_rte/model/rte/interaction/impl/IocValueBufferImplementationImpl.java -text
-src/jp.ac.nagoya_u.is.nces.a_rte.model/src/jp/ac/nagoya_u/is/nces/a_rte/model/rte/interaction/impl/ModeSwitchEventImpl.java -text
-src/jp.ac.nagoya_u.is.nces.a_rte.model/src/jp/ac/nagoya_u/is/nces/a_rte/model/rte/interaction/impl/ModeSwitchTriggeringEntityStartImplementationImpl.java -text
 src/jp.ac.nagoya_u.is.nces.a_rte.model/src/jp/ac/nagoya_u/is/nces/a_rte/model/rte/interaction/impl/OsEventSetEntityStarterImpl.java -text
 src/jp.ac.nagoya_u.is.nces.a_rte.model/src/jp/ac/nagoya_u/is/nces/a_rte/model/rte/interaction/impl/OsTaskActivateEntityStarterImpl.java -text
 src/jp.ac.nagoya_u.is.nces.a_rte.model/src/jp/ac/nagoya_u/is/nces/a_rte/model/rte/interaction/impl/PeriodicComSendProxyImpl.java -text
@@ -1007,7 +996,6 @@ src/jp.ac.nagoya_u.is.nces.a_rte.model/src/jp/ac/nagoya_u/is/nces/a_rte/model/rt
 src/jp.ac.nagoya_u.is.nces.a_rte.model/src/jp/ac/nagoya_u/is/nces/a_rte/model/rte/interaction/impl/SendInteractionImpl.java -text
 src/jp.ac.nagoya_u.is.nces.a_rte.model/src/jp/ac/nagoya_u/is/nces/a_rte/model/rte/interaction/impl/SenderImpl.java -text
 src/jp.ac.nagoya_u.is.nces.a_rte.model/src/jp/ac/nagoya_u/is/nces/a_rte/model/rte/interaction/impl/StartOffsetCounterImplementationImpl.java -text
-src/jp.ac.nagoya_u.is.nces.a_rte.model/src/jp/ac/nagoya_u/is/nces/a_rte/model/rte/interaction/impl/TimingEventImpl.java -text
 src/jp.ac.nagoya_u.is.nces.a_rte.model/src/jp/ac/nagoya_u/is/nces/a_rte/model/rte/interaction/impl/TimingTriggeringEntityStartImplementationImpl.java -text
 src/jp.ac.nagoya_u.is.nces.a_rte.model/src/jp/ac/nagoya_u/is/nces/a_rte/model/rte/interaction/impl/TrustedFunctionComSendImplementationImpl.java -text
 src/jp.ac.nagoya_u.is.nces.a_rte.model/src/jp/ac/nagoya_u/is/nces/a_rte/model/rte/interaction/impl/TrustedFunctionRteSendImplementationImpl.java -text
@@ -1169,7 +1157,6 @@ src/jp.ac.nagoya_u.is.nces.a_rte.model/src/jp/ac/nagoya_u/is/nces/a_rte/model/rt
 src/jp.ac.nagoya_u.is.nces.a_rte.model/src/jp/ac/nagoya_u/is/nces/a_rte/model/rte/module/RteLifecycleApi.java -text
 src/jp.ac.nagoya_u.is.nces.a_rte.model/src/jp/ac/nagoya_u/is/nces/a_rte/model/rte/module/RteLifecycleHeader.java -text
 src/jp.ac.nagoya_u.is.nces.a_rte.model/src/jp/ac/nagoya_u/is/nces/a_rte/model/rte/module/RteModule.java -text
-src/jp.ac.nagoya_u.is.nces.a_rte.model/src/jp/ac/nagoya_u/is/nces/a_rte/model/rte/module/RteSendTrustedFunctionParamType.java -text
 src/jp.ac.nagoya_u.is.nces.a_rte.model/src/jp/ac/nagoya_u/is/nces/a_rte/model/rte/module/RteSource.java -text
 src/jp.ac.nagoya_u.is.nces.a_rte.model/src/jp/ac/nagoya_u/is/nces/a_rte/model/rte/module/RteStartApi.java -text
 src/jp.ac.nagoya_u.is.nces.a_rte.model/src/jp/ac/nagoya_u/is/nces/a_rte/model/rte/module/RteStopApi.java -text
@@ -1204,7 +1191,6 @@ src/jp.ac.nagoya_u.is.nces.a_rte.model/src/jp/ac/nagoya_u/is/nces/a_rte/model/rt
 src/jp.ac.nagoya_u.is.nces.a_rte.model/src/jp/ac/nagoya_u/is/nces/a_rte/model/rte/module/TrustedFunctionRteBufferInvalidateSendOperation.java -text
 src/jp.ac.nagoya_u.is.nces.a_rte.model/src/jp/ac/nagoya_u/is/nces/a_rte/model/rte/module/TrustedFunctionRteBufferWriteSendOperation.java -text
 src/jp.ac.nagoya_u.is.nces.a_rte.model/src/jp/ac/nagoya_u/is/nces/a_rte/model/rte/module/TrustedFunctionRteOperation.java -text
-src/jp.ac.nagoya_u.is.nces.a_rte.model/src/jp/ac/nagoya_u/is/nces/a_rte/model/rte/module/TrustedFunctionRteSendOperation.java -text
 src/jp.ac.nagoya_u.is.nces.a_rte.model/src/jp/ac/nagoya_u/is/nces/a_rte/model/rte/module/Type.java -text
 src/jp.ac.nagoya_u.is.nces.a_rte.model/src/jp/ac/nagoya_u/is/nces/a_rte/model/rte/module/UnionMember.java -text
 src/jp.ac.nagoya_u.is.nces.a_rte.model/src/jp/ac/nagoya_u/is/nces/a_rte/model/rte/module/UnionType.java -text
@@ -1224,11 +1210,8 @@ src/jp.ac.nagoya_u.is.nces.a_rte.model/src/jp/ac/nagoya_u/is/nces/a_rte/model/rt
 src/jp.ac.nagoya_u.is.nces.a_rte.model/src/jp/ac/nagoya_u/is/nces/a_rte/model/rte/module/impl/CallApiImpl.java -text
 src/jp.ac.nagoya_u.is.nces.a_rte.model/src/jp/ac/nagoya_u/is/nces/a_rte/model/rte/module/impl/ComApiImpl.java -text
 src/jp.ac.nagoya_u.is.nces.a_rte.model/src/jp/ac/nagoya_u/is/nces/a_rte/model/rte/module/impl/ComCallbackImpl.java -text
-src/jp.ac.nagoya_u.is.nces.a_rte.model/src/jp/ac/nagoya_u/is/nces/a_rte/model/rte/module/impl/ComInvalidateCallbackImpl.java -text
 src/jp.ac.nagoya_u.is.nces.a_rte.model/src/jp/ac/nagoya_u/is/nces/a_rte/model/rte/module/impl/ComReadOperationImpl.java -text
-src/jp.ac.nagoya_u.is.nces.a_rte.model/src/jp/ac/nagoya_u/is/nces/a_rte/model/rte/module/impl/ComReceiveCallbackImpl.java -text
 src/jp.ac.nagoya_u.is.nces.a_rte.model/src/jp/ac/nagoya_u/is/nces/a_rte/model/rte/module/impl/ComReceiveSignalApiImpl.java -text
-src/jp.ac.nagoya_u.is.nces.a_rte.model/src/jp/ac/nagoya_u/is/nces/a_rte/model/rte/module/impl/ComReceiveTimeoutCallbackImpl.java -text
 src/jp.ac.nagoya_u.is.nces.a_rte.model/src/jp/ac/nagoya_u/is/nces/a_rte/model/rte/module/impl/ComSendOperationImpl.java -text
 src/jp.ac.nagoya_u.is.nces.a_rte.model/src/jp/ac/nagoya_u/is/nces/a_rte/model/rte/module/impl/ComSendSignalApiImpl.java -text
 src/jp.ac.nagoya_u.is.nces.a_rte.model/src/jp/ac/nagoya_u/is/nces/a_rte/model/rte/module/impl/ComSendSignalImmediateEntityImpl.java -text
@@ -1363,7 +1346,6 @@ src/jp.ac.nagoya_u.is.nces.a_rte.model/src/jp/ac/nagoya_u/is/nces/a_rte/model/rt
 src/jp.ac.nagoya_u.is.nces.a_rte.model/src/jp/ac/nagoya_u/is/nces/a_rte/model/rte/module/impl/RteLifecycleApiImpl.java -text
 src/jp.ac.nagoya_u.is.nces.a_rte.model/src/jp/ac/nagoya_u/is/nces/a_rte/model/rte/module/impl/RteLifecycleHeaderImpl.java -text
 src/jp.ac.nagoya_u.is.nces.a_rte.model/src/jp/ac/nagoya_u/is/nces/a_rte/model/rte/module/impl/RteModuleImpl.java -text
-src/jp.ac.nagoya_u.is.nces.a_rte.model/src/jp/ac/nagoya_u/is/nces/a_rte/model/rte/module/impl/RteSendTrustedFunctionParamTypeImpl.java -text
 src/jp.ac.nagoya_u.is.nces.a_rte.model/src/jp/ac/nagoya_u/is/nces/a_rte/model/rte/module/impl/RteSourceImpl.java -text
 src/jp.ac.nagoya_u.is.nces.a_rte.model/src/jp/ac/nagoya_u/is/nces/a_rte/model/rte/module/impl/RteStartApiImpl.java -text
 src/jp.ac.nagoya_u.is.nces.a_rte.model/src/jp/ac/nagoya_u/is/nces/a_rte/model/rte/module/impl/RteStopApiImpl.java -text
@@ -1397,7 +1379,6 @@ src/jp.ac.nagoya_u.is.nces.a_rte.model/src/jp/ac/nagoya_u/is/nces/a_rte/model/rt
 src/jp.ac.nagoya_u.is.nces.a_rte.model/src/jp/ac/nagoya_u/is/nces/a_rte/model/rte/module/impl/TrustedFunctionRteBufferInvalidateSendOperationImpl.java -text
 src/jp.ac.nagoya_u.is.nces.a_rte.model/src/jp/ac/nagoya_u/is/nces/a_rte/model/rte/module/impl/TrustedFunctionRteBufferWriteSendOperationImpl.java -text
 src/jp.ac.nagoya_u.is.nces.a_rte.model/src/jp/ac/nagoya_u/is/nces/a_rte/model/rte/module/impl/TrustedFunctionRteOperationImpl.java -text
-src/jp.ac.nagoya_u.is.nces.a_rte.model/src/jp/ac/nagoya_u/is/nces/a_rte/model/rte/module/impl/TrustedFunctionRteSendOperationImpl.java -text
 src/jp.ac.nagoya_u.is.nces.a_rte.model/src/jp/ac/nagoya_u/is/nces/a_rte/model/rte/module/impl/TypeImpl.java -text
 src/jp.ac.nagoya_u.is.nces.a_rte.model/src/jp/ac/nagoya_u/is/nces/a_rte/model/rte/module/impl/UnionMemberImpl.java -text
 src/jp.ac.nagoya_u.is.nces.a_rte.model/src/jp/ac/nagoya_u/is/nces/a_rte/model/rte/module/impl/UnionTypeImpl.java -text
