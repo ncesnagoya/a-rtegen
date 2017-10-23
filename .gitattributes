@@ -1,5 +1,6 @@
 * text=auto !eol
 /MANIFEST -text
+/MANIFEST-SRC -text
 bin/bin/atk2style.cfg -text
 bin/bin/logging.properties -text
 bin/bin/rtegen.bat -text
@@ -10,6 +11,12 @@ bin/lib/args4j-2.0.25.jar -text
 bin/lib/com.google.guava_14.0.1.jar -text
 bin/lib/com.ibm.icu_50.1.1.v201304230130.jar -text
 bin/lib/guava-14.0.1.jar -text
+bin/lib/jp.ac.nagoya_u.is.nces.a_rte.app_1.4.0.201612080930.jar -text
+bin/lib/jp.ac.nagoya_u.is.nces.a_rte.codegen_1.4.0.201612121500.jar -text
+bin/lib/jp.ac.nagoya_u.is.nces.a_rte.m2m_1.4.0.201702221800.jar -text
+bin/lib/jp.ac.nagoya_u.is.nces.a_rte.model_1.4.0.201612121900.jar -text
+bin/lib/jp.ac.nagoya_u.is.nces.a_rte.persist_1.4.0.201612080930.jar -text
+bin/lib/jp.ac.nagoya_u.is.nces.a_rte.validation_1.4.0.201612080930.jar -text
 bin/lib/lpg.runtime.java_2.0.17.v201004271640.jar -text
 bin/lib/org.eclipse.acceleo.common_3.4.1.201309031307.jar -text
 bin/lib/org.eclipse.acceleo.engine_3.4.1.201309031307.jar -text
@@ -57,6 +64,9 @@ sample/general/HelloAutosar/SWC2_MemMap.h -text
 sample/general/HelloAutosar/SystemDesk.arxml -text
 sample/general/HelloAutosar/SystemDesk2.arxml -text
 sample/general/HelloAutosar/SystemDesk_WithCom.arxml -text
+sample/general/HelloAutosar/SystemDesk_WithComSG.arxml -text
+sample/general/HelloAutosar/SystemDesk_WithComSG_EcuInstance1.arxml -text
+sample/general/HelloAutosar/SystemDesk_WithComSG_EcuInstance2.arxml -text
 sample/general/HelloAutosar/SystemDesk_WithComTOut.arxml -text
 sample/general/HelloAutosar/SystemDesk_WithComTOut_EcuInstance1.arxml -text
 sample/general/HelloAutosar/SystemDesk_WithComTOut_EcuInstance2.arxml -text
@@ -130,12 +140,20 @@ sample/sc1/HelloAutosarWithCom/nios2_dev_gcc/common.sh -text
 sample/sc1/HelloAutosarWithCom/nios2_dev_gcc/ecu1/configure.sh -text
 sample/sc1/HelloAutosarWithCom/nios2_dev_gcc/ecu2/configure.sh -text
 sample/sc1/HelloAutosarWithCom/nios2_dev_gcc/nios2_dev_gcc_common.yaml -text
+sample/sc1/HelloAutosarWithCom/nios2_dev_gcc/stub/CanTp_Cbk.h -text
+sample/sc1/HelloAutosarWithComSG/HelloAutosarWithComSG_ECU1.yaml -text
+sample/sc1/HelloAutosarWithComSG/HelloAutosarWithComSG_ECU2.yaml -text
+sample/sc1/HelloAutosarWithComSG/nios2_dev_gcc/common.sh -text
+sample/sc1/HelloAutosarWithComSG/nios2_dev_gcc/ecu1/configure.sh -text
+sample/sc1/HelloAutosarWithComSG/nios2_dev_gcc/ecu2/configure.sh -text
+sample/sc1/HelloAutosarWithComSG/nios2_dev_gcc/nios2_dev_gcc_common.yaml -text
 sample/sc1/HelloAutosarWithComTOut/HelloAutosarWithComTOut_ECU1.yaml -text
 sample/sc1/HelloAutosarWithComTOut/HelloAutosarWithComTOut_ECU2.yaml -text
 sample/sc1/HelloAutosarWithComTOut/nios2_dev_gcc/common.sh -text
 sample/sc1/HelloAutosarWithComTOut/nios2_dev_gcc/ecu1/configure.sh -text
 sample/sc1/HelloAutosarWithComTOut/nios2_dev_gcc/ecu2/configure.sh -text
 sample/sc1/HelloAutosarWithComTOut/nios2_dev_gcc/nios2_dev_gcc_common.yaml -text
+sample/sc1/HelloAutosarWithComTOut/nios2_dev_gcc/stub/CanTp_Cbk.h -text
 sample/sc1/HelloAutosarWithTransAck/HelloAutosar.yaml -text
 sample/sc1/HelloAutosarWithTransAck/SWC1.c -text
 sample/sc1/HelloAutosarWithTransAck/SWC2.c -text
@@ -227,6 +245,7 @@ sample/sc3/HelloAutosarWithTransAck/SWC1.c -text
 sample/sc3/HelloAutosarWithTransAck/SWC2.c -text
 sample/sc3/HelloAutosarWithTransAck/SystemDesk.arxml -text
 sample/sc3/HelloAutosarWithTransAck/configure.sh -text
+sample/setvars.sh -text
 src/cleanup.xml -text
 src/codingstyle.xml -text
 src/com.google.guava/.classpath -text
@@ -243,6 +262,7 @@ src/jp.ac.nagoya_u.is.nces.a_rte.app/.project -text
 src/jp.ac.nagoya_u.is.nces.a_rte.app/.settings/org.eclipse.core.resources.prefs -text
 src/jp.ac.nagoya_u.is.nces.a_rte.app/.settings/org.eclipse.core.runtime.prefs -text
 src/jp.ac.nagoya_u.is.nces.a_rte.app/.settings/org.eclipse.jdt.core.prefs -text
+src/jp.ac.nagoya_u.is.nces.a_rte.app/MANIFEST -text
 src/jp.ac.nagoya_u.is.nces.a_rte.app/META-INF/MANIFEST.MF -text
 src/jp.ac.nagoya_u.is.nces.a_rte.app/build.properties -text
 src/jp.ac.nagoya_u.is.nces.a_rte.app/lib/args4j-2.0.25-sources.jar -text
@@ -453,6 +473,7 @@ src/jp.ac.nagoya_u.is.nces.a_rte.model/src/jp/ac/nagoya_u/is/nces/a_rte/model/ar
 src/jp.ac.nagoya_u.is.nces.a_rte.model/src/jp/ac/nagoya_u/is/nces/a_rte/model/ar4x/ecuc/OsResource.java -text
 src/jp.ac.nagoya_u.is.nces.a_rte.model/src/jp/ac/nagoya_u/is/nces/a_rte/model/ar4x/ecuc/OsSpinlock.java -text
 src/jp.ac.nagoya_u.is.nces.a_rte.model/src/jp/ac/nagoya_u/is/nces/a_rte/model/ar4x/ecuc/OsSpinlockLockMethodEnum.java -text
+src/jp.ac.nagoya_u.is.nces.a_rte.model/src/jp/ac/nagoya_u/is/nces/a_rte/model/ar4x/ecuc/OsSystemCycle.java -text
 src/jp.ac.nagoya_u.is.nces.a_rte.model/src/jp/ac/nagoya_u/is/nces/a_rte/model/ar4x/ecuc/OsTask.java -text
 src/jp.ac.nagoya_u.is.nces.a_rte.model/src/jp/ac/nagoya_u/is/nces/a_rte/model/ar4x/ecuc/OsTaskScheduleEnum.java -text
 src/jp.ac.nagoya_u.is.nces.a_rte.model/src/jp/ac/nagoya_u/is/nces/a_rte/model/ar4x/ecuc/Rte.java -text
@@ -499,6 +520,7 @@ src/jp.ac.nagoya_u.is.nces.a_rte.model/src/jp/ac/nagoya_u/is/nces/a_rte/model/ar
 src/jp.ac.nagoya_u.is.nces.a_rte.model/src/jp/ac/nagoya_u/is/nces/a_rte/model/ar4x/ecuc/impl/OsOSImpl.java -text
 src/jp.ac.nagoya_u.is.nces.a_rte.model/src/jp/ac/nagoya_u/is/nces/a_rte/model/ar4x/ecuc/impl/OsResourceImpl.java -text
 src/jp.ac.nagoya_u.is.nces.a_rte.model/src/jp/ac/nagoya_u/is/nces/a_rte/model/ar4x/ecuc/impl/OsSpinlockImpl.java -text
+src/jp.ac.nagoya_u.is.nces.a_rte.model/src/jp/ac/nagoya_u/is/nces/a_rte/model/ar4x/ecuc/impl/OsSystemCycleImpl.java -text
 src/jp.ac.nagoya_u.is.nces.a_rte.model/src/jp/ac/nagoya_u/is/nces/a_rte/model/ar4x/ecuc/impl/OsTaskImpl.java -text
 src/jp.ac.nagoya_u.is.nces.a_rte.model/src/jp/ac/nagoya_u/is/nces/a_rte/model/ar4x/ecuc/impl/RteBswEventToTaskMappingImpl.java -text
 src/jp.ac.nagoya_u.is.nces.a_rte.model/src/jp/ac/nagoya_u/is/nces/a_rte/model/ar4x/ecuc/impl/RteBswExclusiveAreaImplImpl.java -text
@@ -894,6 +916,7 @@ src/jp.ac.nagoya_u.is.nces.a_rte.model/src/jp/ac/nagoya_u/is/nces/a_rte/model/rt
 src/jp.ac.nagoya_u.is.nces.a_rte.model/src/jp/ac/nagoya_u/is/nces/a_rte/model/rte/ex/AssemblyDataInstanceConnectorEx.java -text
 src/jp.ac.nagoya_u.is.nces.a_rte.model/src/jp/ac/nagoya_u/is/nces/a_rte/model/rte/ex/AtomicSwComponentTypeEx.java -text
 src/jp.ac.nagoya_u.is.nces.a_rte.model/src/jp/ac/nagoya_u/is/nces/a_rte/model/rte/ex/BswSchedulableEntityEx.java -text
+src/jp.ac.nagoya_u.is.nces.a_rte.model/src/jp/ac/nagoya_u/is/nces/a_rte/model/rte/ex/ComGroupSignalEx.java -text
 src/jp.ac.nagoya_u.is.nces.a_rte.model/src/jp/ac/nagoya_u/is/nces/a_rte/model/rte/ex/ComSignalEx.java -text
 src/jp.ac.nagoya_u.is.nces.a_rte.model/src/jp/ac/nagoya_u/is/nces/a_rte/model/rte/ex/ComSignalGroupEx.java -text
 src/jp.ac.nagoya_u.is.nces.a_rte.model/src/jp/ac/nagoya_u/is/nces/a_rte/model/rte/ex/CompuMethodEx.java -text
@@ -927,6 +950,7 @@ src/jp.ac.nagoya_u.is.nces.a_rte.model/src/jp/ac/nagoya_u/is/nces/a_rte/model/rt
 src/jp.ac.nagoya_u.is.nces.a_rte.model/src/jp/ac/nagoya_u/is/nces/a_rte/model/rte/ex/impl/AssemblyDataInstanceConnectorExImpl.java -text
 src/jp.ac.nagoya_u.is.nces.a_rte.model/src/jp/ac/nagoya_u/is/nces/a_rte/model/rte/ex/impl/AtomicSwComponentTypeExImpl.java -text
 src/jp.ac.nagoya_u.is.nces.a_rte.model/src/jp/ac/nagoya_u/is/nces/a_rte/model/rte/ex/impl/BswSchedulableEntityExImpl.java -text
+src/jp.ac.nagoya_u.is.nces.a_rte.model/src/jp/ac/nagoya_u/is/nces/a_rte/model/rte/ex/impl/ComGroupSignalExImpl.java -text
 src/jp.ac.nagoya_u.is.nces.a_rte.model/src/jp/ac/nagoya_u/is/nces/a_rte/model/rte/ex/impl/ComSignalExImpl.java -text
 src/jp.ac.nagoya_u.is.nces.a_rte.model/src/jp/ac/nagoya_u/is/nces/a_rte/model/rte/ex/impl/ComSignalGroupExImpl.java -text
 src/jp.ac.nagoya_u.is.nces.a_rte.model/src/jp/ac/nagoya_u/is/nces/a_rte/model/rte/ex/impl/CompuMethodExImpl.java -text
@@ -1308,6 +1332,7 @@ src/jp.ac.nagoya_u.is.nces.a_rte.model/src/jp/ac/nagoya_u/is/nces/a_rte/model/rt
 src/jp.ac.nagoya_u.is.nces.a_rte.model/src/jp/ac/nagoya_u/is/nces/a_rte/model/rte/module/Type.java -text
 src/jp.ac.nagoya_u.is.nces.a_rte.model/src/jp/ac/nagoya_u/is/nces/a_rte/model/rte/module/UnionMember.java -text
 src/jp.ac.nagoya_u.is.nces.a_rte.model/src/jp/ac/nagoya_u/is/nces/a_rte/model/rte/module/UnionType.java -text
+src/jp.ac.nagoya_u.is.nces.a_rte.model/src/jp/ac/nagoya_u/is/nces/a_rte/model/rte/module/UserDefinedExcludeOperation.java -text
 src/jp.ac.nagoya_u.is.nces.a_rte.model/src/jp/ac/nagoya_u/is/nces/a_rte/model/rte/module/Value.java -text
 src/jp.ac.nagoya_u.is.nces.a_rte.model/src/jp/ac/nagoya_u/is/nces/a_rte/model/rte/module/Variable.java -text
 src/jp.ac.nagoya_u.is.nces.a_rte.model/src/jp/ac/nagoya_u/is/nces/a_rte/model/rte/module/VariableInitializeOperation.java -text
@@ -1541,6 +1566,7 @@ src/jp.ac.nagoya_u.is.nces.a_rte.model/src/jp/ac/nagoya_u/is/nces/a_rte/model/rt
 src/jp.ac.nagoya_u.is.nces.a_rte.model/src/jp/ac/nagoya_u/is/nces/a_rte/model/rte/module/impl/TypeImpl.java -text
 src/jp.ac.nagoya_u.is.nces.a_rte.model/src/jp/ac/nagoya_u/is/nces/a_rte/model/rte/module/impl/UnionMemberImpl.java -text
 src/jp.ac.nagoya_u.is.nces.a_rte.model/src/jp/ac/nagoya_u/is/nces/a_rte/model/rte/module/impl/UnionTypeImpl.java -text
+src/jp.ac.nagoya_u.is.nces.a_rte.model/src/jp/ac/nagoya_u/is/nces/a_rte/model/rte/module/impl/UserDefinedExcludeOperationImpl.java -text
 src/jp.ac.nagoya_u.is.nces.a_rte.model/src/jp/ac/nagoya_u/is/nces/a_rte/model/rte/module/impl/ValueImpl.java -text
 src/jp.ac.nagoya_u.is.nces.a_rte.model/src/jp/ac/nagoya_u/is/nces/a_rte/model/rte/module/impl/VariableImpl.java -text
 src/jp.ac.nagoya_u.is.nces.a_rte.model/src/jp/ac/nagoya_u/is/nces/a_rte/model/rte/module/impl/VariableInitializeOperationImpl.java -text
