@@ -44,6 +44,8 @@
  */
 package jp.ac.nagoya_u.is.nces.a_rte.model.rte.module;
 
+import org.eclipse.emf.common.util.EList;
+
 
 /**
  * <!-- begin-user-doc -->
@@ -58,6 +60,7 @@ package jp.ac.nagoya_u.is.nces.a_rte.model.rte.module;
  * The following features are supported:
  * <ul>
  *   <li>{@link jp.ac.nagoya_u.is.nces.a_rte.model.rte.module.ServerRunnableStartOperation#getStartServerRunnable <em>Start Server Runnable</em>}</li>
+ *   <li>{@link jp.ac.nagoya_u.is.nces.a_rte.model.rte.module.ServerRunnableStartOperation#getPortArgValue <em>Port Arg Value</em>}</li>
  * </ul>
  * </p>
  *
@@ -81,5 +84,21 @@ public interface ServerRunnableStartOperation extends ExecutableStartOperation {
 	 * @generated
 	 */
 	RunnableEntity getStartServerRunnable();
+
+	/**
+	 * Returns the value of the '<em><b>Port Arg Value</b></em>' reference list.
+	 * The list contents are of type {@link jp.ac.nagoya_u.is.nces.a_rte.model.rte.module.Value}.
+	 * <!-- begin-user-doc -->
+	 * <p>
+	 * If the meaning of the '<em>Port Arg Value</em>' reference list isn't clear,
+	 * there really should be more of a description here...
+	 * </p>
+	 * <!-- end-user-doc -->
+	 * @return the value of the '<em>Port Arg Value</em>' reference list.
+	 * @see jp.ac.nagoya_u.is.nces.a_rte.model.rte.module.ModulePackage#getServerRunnableStartOperation_PortArgValue()
+	 * @model
+	 * @generated
+	 */
+	EList<Value> getPortArgValue();
 
 } // ServerRunnableStartOperation

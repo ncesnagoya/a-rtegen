@@ -133,6 +133,7 @@ public class EcucFactoryImpl extends EFactoryImpl implements EcucFactory {
 			case EcucPackage.RTE_BSW_REQUIRED_MODE_GROUP_CONNECTION: return (EObject)createRteBswRequiredModeGroupConnection();
 			case EcucPackage.RTE_BSW_MODULE_INSTANCE: return (EObject)createRteBswModuleInstance();
 			case EcucPackage.RTE_BSW_EXCLUSIVE_AREA_IMPL: return (EObject)createRteBswExclusiveAreaImpl();
+			case EcucPackage.OS_SYSTEM_CYCLE: return (EObject)createOsSystemCycle();
 			default:
 				throw new IllegalArgumentException("The class '" + eClass.getName() + "' is not a valid classifier");
 		}
@@ -542,6 +543,16 @@ public class EcucFactoryImpl extends EFactoryImpl implements EcucFactory {
 	public RteBswExclusiveAreaImpl createRteBswExclusiveAreaImpl() {
 		RteBswExclusiveAreaImplImpl rteBswExclusiveAreaImpl = new RteBswExclusiveAreaImplImpl();
 		return rteBswExclusiveAreaImpl;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public OsSystemCycle createOsSystemCycle() {
+		OsSystemCycleImpl osSystemCycle = new OsSystemCycleImpl();
+		return osSystemCycle;
 	}
 
 	/**

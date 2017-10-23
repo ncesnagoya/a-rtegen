@@ -71,10 +71,12 @@
 
 #ifdef TOPPERS_USE_WDGSTACK
 #include "WdgM.h"
-#include "WdgM_PBcfg.h"
 #include "Wdg.h"
 #include "Wdg_Target.h"
 #include "Wdg_PBcfg.h"
+
+extern const WdgM_ConfigType WdgM_WdgMConfigSet_0;
+
 #endif /* TOPPERS_USE_WDGSTACK */
 
 #ifdef TOPPERS_PERFORMANCE
@@ -126,7 +128,7 @@ EcuM_BswStartupTwo(void)
 #ifdef TOPPERS_USE_WDGSTACK
 	/* WDGスタックモジュール初期化 */
 	Wdg_Init(&wdg_config_WdgSettingsConfig_0);
-	WdgM_Init(&wdgm_config_WdgMConfigSet_0);
+	WdgM_Init(&WdgM_WdgMConfigSet_0);
 	
 
 #endif /* TOPPERS_USE_WDGSTACK */

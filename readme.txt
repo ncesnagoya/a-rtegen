@@ -9,7 +9,7 @@
 TOPPERS/A-RTEGEN
     Automotive Runtime Environment 
 
-Copyright (C) 2013-2016 by Eiwa System Management, Inc., JAPAN
+Copyright (C) 2013-2017 by Eiwa System Management, Inc., JAPAN
 
 上記著作権者は，以下の (1)〜(3)の条件を満たす場合に限り，本ドキュメ
 ント（本ドキュメントを改変したものを含む．以下同じ）を使用・複製・改
@@ -179,13 +179,13 @@ Rte_ComSendSignalProxyImmediateEvent
 	スレーブコアからのECU間連携の実現のために使用するOSイベント．
 	スレーブコアからのECU間連携が行なわれ，COMシグナルが即時通信として設定されている場合，本OSオブジェクトのためのオブジェクトコンテナが生成される．
 
-Rte_ComSendSignalTf_<PID>
-	(<PID> = 本OS信頼関数を配置するパーティションのショートネーム)
+Rte_ComSendSignalTf_<CS>
+	(<CS> = COMシグナルのショートネーム)
 	マスタコアの非信頼パーティションからのECU間連携の実現のために使用するOS信頼関数(プリミティブ実装データ型用)．
 	マスタコアの非信頼パーティションからのECU関連携が行なわれる場合，本OSオブジェクトのためのオブジェクトコンテナが生成される．
 
-Rte_ComSendSignalGroupTf_<PID>
-	(<PID> = 本OS信頼関数を配置するパーティションのショートネーム)
+Rte_ComSendSignalGroupTf_<CS>
+	(<CS> = COMシグナルグループのショートネーム)
 	マスタコアの非信頼パーティションからのECU間連携の実現のために使用するOS信頼関数(複合データ型用)．
 	マスタコアの非信頼パーティションからのECU関連携が行なわれる場合，本OSオブジェクトのためのオブジェクトコンテナが生成される．
 

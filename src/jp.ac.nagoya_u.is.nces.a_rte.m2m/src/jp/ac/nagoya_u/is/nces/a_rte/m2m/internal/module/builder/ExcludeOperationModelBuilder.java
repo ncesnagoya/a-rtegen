@@ -42,7 +42,12 @@
  */
 package jp.ac.nagoya_u.is.nces.a_rte.m2m.internal.module.builder;
 
+import static jp.ac.nagoya_u.is.nces.a_rte.model.ar4x.ecuc.EcucPackage.Literals.OS_SYSTEM_CYCLE;
+
+import com.google.common.base.Optional;
+
 import jp.ac.nagoya_u.is.nces.a_rte.m2m.internal.common.util.Identifiers;
+import jp.ac.nagoya_u.is.nces.a_rte.model.ar4x.ecuc.OsSystemCycle;
 import jp.ac.nagoya_u.is.nces.a_rte.model.ar4x.ecuc.RteBswExclusiveAreaImpl;
 import jp.ac.nagoya_u.is.nces.a_rte.model.ar4x.ecuc.RteExclusiveAreaImplMechanismEnum;
 import jp.ac.nagoya_u.is.nces.a_rte.model.ar4x.ecuc.RteExclusiveAreaImplementation;
@@ -54,10 +59,10 @@ import jp.ac.nagoya_u.is.nces.a_rte.model.rte.module.NoneExcludeOperation;
 import jp.ac.nagoya_u.is.nces.a_rte.model.rte.module.OsInterruptBlockExcludeOperation;
 import jp.ac.nagoya_u.is.nces.a_rte.model.rte.module.OsResourceExcludeOperation;
 import jp.ac.nagoya_u.is.nces.a_rte.model.rte.module.OsSpinlockExcludeOperation;
+import jp.ac.nagoya_u.is.nces.a_rte.model.rte.module.UserDefinedExcludeOperation;
 
 public class ExcludeOperationModelBuilder {
 
-	@SuppressWarnings("unused")
 	private final ModuleModelBuildContext context;
 
 	public ExcludeOperationModelBuilder(ModuleModelBuildContext context) {
@@ -116,7 +121,12 @@ public class ExcludeOperationModelBuilder {
 		if (isInterCoreLock) {
 			return createOsSpinlockExcludeOperation(Identifiers.RTE_INTERNAL_SPINLOCK_NAME);
 		} else {
-			return createAllInterruptBlockExcludeOperation();
+			Optional<OsSystemCycle> sourceSystemCycle = this.context.query.tryFindSingleByKind(OS_SYSTEM_CYCLE);
+			if (sourceSystemCycle.isPresent()) {
+				return createUserDefinedExcludeOperation();
+			} else {
+				return createOsInterruptBlockExcludeOperation();
+			}
 		}
 	}
 
@@ -138,6 +148,10 @@ public class ExcludeOperationModelBuilder {
 		OsSpinlockExcludeOperation destExcludeOperation = ModuleFactory.eINSTANCE.createOsSpinlockExcludeOperation();
 		destExcludeOperation.setOsSpinlockId(osSpinlockId);
 		return destExcludeOperation;
+	}
+
+	private UserDefinedExcludeOperation createUserDefinedExcludeOperation() {
+		return ModuleFactory.eINSTANCE.createUserDefinedExcludeOperation();
 	}
 
 	private NoneExcludeOperation createNoneExcludeOperation() {

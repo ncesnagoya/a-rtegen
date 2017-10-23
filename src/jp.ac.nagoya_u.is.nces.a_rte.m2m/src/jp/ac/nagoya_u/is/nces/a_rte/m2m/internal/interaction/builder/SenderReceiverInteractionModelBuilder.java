@@ -137,7 +137,7 @@ public class SenderReceiverInteractionModelBuilder {
 			EList<DataSendCompletedEvent> rteEvents = ((PVariableDataInstanceInSwc)sourceDataInstanceInComposition.getPrototype()).getRelatedDataSendCompletedEvent();
 			for (RteEvent rteEvent : rteEvents) {
 				EntityStarter entityStarter = (EntityStarter) this.context.query.get(rteEvent, RTE_EVENT_EX___GET_RELATED_ENTITY_STARTER__RTEEVENT);
-				if (! destSender.getActivatesOnSendCompleted().contains(entityStarter)) {
+				if (! destSender.getActivatesOnSendCompleted().contains(entityStarter)) { // COVERAGE (コードレビューで問題ないことを確認)
 					destSender.getActivatesOnSendCompleted().add(entityStarter);
 				}
 			}
@@ -155,14 +155,14 @@ public class SenderReceiverInteractionModelBuilder {
 		EList<DataReceivedEvent> drEvents = ((RVariableDataInstanceInSwc)sourceDataInstanceInComposition.getPrototype()).getRelatedDataReceivedEvent();
 		for (RteEvent rteEvent : drEvents) {
 			EntityStarter entityStarter = (EntityStarter) this.context.query.get(rteEvent, RTE_EVENT_EX___GET_RELATED_ENTITY_STARTER__RTEEVENT);
-			if (! destReceiver.getActivatesOnReceived().contains(entityStarter)) {
+			if (! destReceiver.getActivatesOnReceived().contains(entityStarter)) { // COVERAGE (コードレビューで問題ないことを確認)
 				destReceiver.getActivatesOnReceived().add(entityStarter);
 			}
 		}
 		EList<DataReceiveErrorEvent> dreEvents = ((RVariableDataInstanceInSwc)sourceDataInstanceInComposition.getPrototype()).getRelatedDataReceiveErrorEvent();
 		for (RteEvent rteEvent : dreEvents) {
 			EntityStarter entityStarter = (EntityStarter) this.context.query.get(rteEvent, RTE_EVENT_EX___GET_RELATED_ENTITY_STARTER__RTEEVENT);
-			if (! destReceiver.getActivatesOnReceiveError().contains(entityStarter)) {
+			if (! destReceiver.getActivatesOnReceiveError().contains(entityStarter)) { // COVERAGE (コードレビューで問題ないことを確認)
 				destReceiver.getActivatesOnReceiveError().add(entityStarter);
 			}
 		}

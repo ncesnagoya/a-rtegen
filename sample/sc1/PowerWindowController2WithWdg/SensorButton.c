@@ -65,7 +65,7 @@ Button(void)
 
 	lock = FALSE;
 
-	Rte_Call_se4_CheckpointReached(4);
+	Rte_Call_se2_CheckpointReached(0U);
 
 	Rte_Call_LockStateIn_GetLockState(&state);
 	/* ロックされている場合，LEDを付けて何もせずに終了 */
@@ -74,7 +74,7 @@ Button(void)
 		lock = TRUE;
 	}
 	else {
-		Rte_Call_se1_CheckpointReached(1);
+		Rte_Call_se1_CheckpointReached(0U);
 		Rte_Call_LedStateOut_SetLedState(FALSE);
 	}
 
@@ -85,8 +85,8 @@ Button(void)
 		lock = TRUE;
 	}
 	else {
-		Rte_Call_se3_CheckpointReached(3);
-		Rte_Call_se2_CheckpointReached(2);
+		Rte_Call_se1_CheckpointReached(2U);
+		Rte_Call_se1_CheckpointReached(1U);
 		Rte_Call_LedStateOut_SetLedState2(FALSE);
 	}
 
@@ -97,7 +97,7 @@ Button(void)
 		lock = TRUE;
 	}
 	else {
-		Rte_Call_se5_CheckpointReached(5);
+		Rte_Call_se2_CheckpointReached(1U);
 		Rte_Call_LedStateOut_SetLedState3(FALSE);
 	}
 
@@ -119,6 +119,6 @@ Button(void)
 		}
 	}
 
-	Rte_Call_se6_CheckpointReached(6);
+	Rte_Call_se2_CheckpointReached(2U);
 	return;
 }

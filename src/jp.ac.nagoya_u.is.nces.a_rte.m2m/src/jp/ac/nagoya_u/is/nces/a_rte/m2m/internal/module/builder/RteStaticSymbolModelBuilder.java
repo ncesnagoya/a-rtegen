@@ -2,7 +2,7 @@
  *  TOPPERS/A-RTEGEN
  *      Automotive Runtime Environment Generator
  *
- *  Copyright (C) 2013-2016 by Eiwa System Management, Inc., JAPAN
+ *  Copyright (C) 2013-2017 by Eiwa System Management, Inc., JAPAN
  *
  *  上記著作権者は，以下の(1)〜(4)の条件を満たす場合に限り，本ソフトウェ
  *  ア（本ソフトウェアを改変したものを含む．以下同じ）を使用・複製・改
@@ -460,6 +460,7 @@ public class RteStaticSymbolModelBuilder {
 			destType.setSignedness(Types.getSignedness(sourceElementDataType));
 			destType.setOriginalTypeSymbolName(sourceElementDataType.getShortName());
 		} else {
+			getOrBuildBuiltinDataType(sourceImplementationDataTypeElement.getSwDataDefProps().getBaseType());
 			destType.setSignedness(Types.getSignedness(sourceImplementationDataTypeElement));
 			destType.setOriginalTypeSymbolName(sourceImplementationDataTypeElement.getSwDataDefProps().getBaseType().getNativeDeclaration());
 		}
@@ -837,7 +838,7 @@ public class RteStaticSymbolModelBuilder {
 					for (SenderRecArrayElementMapping senderRecArrayElementMapping : sourceElementMapping) {
 						if(senderRecArrayElementMapping.getIndexedArrayElement().getIndex() == idx) {
 							ComGroupSignal sourceGroupSignal = getComGroupSignal(sourceComSignalGroup, senderRecArrayElementMapping.getSystemSignal());
-							addConstantMember(destComGroupSignalMetaDataInitValueConstant, SymbolNames.createComSignalSymbolicName(Optional.fromNullable(sourceGroupSignal)));
+							addConstantMember(destComGroupSignalMetaDataInitValueConstant, SymbolNames.createComGroupSignalSymbolicName(sourceGroupSignal));
 							addConstantMember(destTypeMemberOffsetMetaDataInitValueConstant, "(" + String.valueOf(idx) + "U * sizeof(" + destDataType.getOriginalTypeSymbolName() + "))");
 						}
 					}
@@ -846,7 +847,7 @@ public class RteStaticSymbolModelBuilder {
 				for (SenderRecRecordElementMapping sourceElementMapping : ((SenderRecRecordTypeMapping) sourceCompositeTypeMapping).getRecordElementMapping()) {
 					if (sourceElement == sourceElementMapping.getImplementationRecordElement()) {
 						ComGroupSignal sourceGroupSignal = getComGroupSignal(sourceComSignalGroup, sourceElementMapping.getSystemSignal());
-						addConstantMember(destComGroupSignalMetaDataInitValueConstant, SymbolNames.createComSignalSymbolicName(Optional.fromNullable(sourceGroupSignal)));
+						addConstantMember(destComGroupSignalMetaDataInitValueConstant, SymbolNames.createComGroupSignalSymbolicName(sourceGroupSignal));
 						addConstantMember(destTypeMemberOffsetMetaDataInitValueConstant, "Rte_offsetof(" + destDataType.getSymbolName() + ", " + sourceElement.getShortName() + ")");
 						break;
 					}
@@ -885,7 +886,7 @@ public class RteStaticSymbolModelBuilder {
 	
 		// Rte_BufferComMetaComplexDataの構築
 		Constant destComMetaDataInitValueConstant = ModuleFactory.eINSTANCE.createConstant();
-		addConstantMember(destComMetaDataInitValueConstant, SymbolNames.createComSignalSymbolicName(Optional.of(sourceComSignalGroup)));
+		addConstantMember(destComMetaDataInitValueConstant, SymbolNames.createComSignalGroupSymbolicName(sourceComSignalGroup));
 		addConstantMember(destComMetaDataInitValueConstant, String.valueOf(sourceComSignalGroup.getComGroupSignal().size()) + "U");
 		addConstantMember(destComMetaDataInitValueConstant, "&" + SymbolNames.createComMetaComGroupSignalVariableName(sourceComSignalGroup) + "[0]");
 		addConstantMember(destComMetaDataInitValueConstant, "&" + SymbolNames.createComMetaTypeMemberOffsetVariableName(sourceComSignalGroup) + "[0]");
@@ -1679,36 +1680,14 @@ public class RteStaticSymbolModelBuilder {
 	}
 	
 	private void buildCsPortArgValueConstants(Swc targetSwc, PortApiOption sourcePortApiOption) throws ModelException {
-		Partition targetPartition = targetSwc.getParent();
-		EcucPartition sourcePartition = (EcucPartition) targetPartition.getSingleSource();
-
 		int i = 0;
 		for (PortDefinedArgumentValue sourcePortDefinedArgumentValue : sourcePortApiOption.getPortArgValue()) {
 			Constant destPortArgValueConstant = createCsPortArgValueConstant(sourcePortDefinedArgumentValue, i);
-			targetSwc.getCsPortArgValueConstant().add(destPortArgValueConstant);
-
-			if (!destPortArgValueConstant.getMember().isEmpty()) {
-				destPortArgValueConstant.getSource().clear(); // NOTE queryで取得するとき、変数のほうを取得させる
-
-				GlobalVariable destPortArgValueVariable = createCsPortArgValueVariable(sourcePortDefinedArgumentValue, i, Optional.fromNullable(sourcePartition), destPortArgValueConstant);
-				targetSwc.getCsPortArgValueVariable().add(destPortArgValueVariable);
+			if (destPortArgValueConstant.getMember().isEmpty()) { // COVERAGE 常にtrue(モデル違反で事前チェックしているため，未カバレッジで問題ない)
+				targetSwc.getCsPortArgValueConstant().add(destPortArgValueConstant);
 			}
 			i++;
 		}
-	}
-
-	private GlobalVariable createCsPortArgValueVariable(PortDefinedArgumentValue sourcePortDefinedArgumentValue, int index, Optional<EcucPartition> sourcePartition, Constant portArgValueConstant)
-			throws ModelException {
-		String symbol = SymbolNames.createCsPortArgValueVariableName(sourcePortDefinedArgumentValue, index);
-		Type type = this.context.builtQuery.findDestType(sourcePortDefinedArgumentValue.getValueType());
-
-		GlobalVariable destPortArgValueVariable = createGlobalVariable(symbol, type, portArgValueConstant, true);
-		destPortArgValueVariable.setSingleSource(sourcePortDefinedArgumentValue);
-		destPortArgValueVariable.setMemoryMapping(this.memmapBuilder.buildRteVariableMemoryMapping(sourcePartition));
-		destPortArgValueVariable.setHasConst(true);
-		destPortArgValueVariable.setHasStatic(false);
-		destPortArgValueVariable.setInitValueConstant(portArgValueConstant);
-		return destPortArgValueVariable;
 	}
 
 	private Constant createCsPortArgValueConstant(PortDefinedArgumentValue sourcePortDefinedArgumentValue, int index) throws ModelException {

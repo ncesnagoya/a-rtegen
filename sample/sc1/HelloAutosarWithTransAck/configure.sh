@@ -12,7 +12,7 @@
 #  Copyright (C) 2015-2016 by Panasonic Advanced Technology Development Co., Ltd., JAPAN
 #  Copyright (C) 2015-2016 by SCSK Corporation, JAPAN
 #  Copyright (C) 2015-2016 by Sunny Giken Inc., JAPAN
-#  Copyright (C) 2015-2016 by SUZUKI MOTOR CORPORATION
+#  Copyright (C) 2015-2017 by SUZUKI MOTOR CORPORATION
 #  Copyright (C) 2015-2016 by TOSHIBA CORPORATION, JAPAN
 #  Copyright (C) 2015-2016 by Witz Corporation
 #
@@ -50,7 +50,7 @@
 #  アの利用により直接的または間接的に生じたいかなる損害に関しても，そ
 #  の責任を負わない．
 #
-# $Id: configure.sh 651 2016-03-31 06:20:22Z mtakada $
+# $Id: configure.sh 822 2017-03-15 07:20:08Z mtakada $
 #
 
 #
@@ -58,13 +58,18 @@
 # データ送信完了イベント，データ受信イベント，データ受信エラーイベント
 #
 
-# OSソースコードまでの相対パス
-OS_PATH=../../../../atk2-sc1
+# 環境変数が設定されていない場合は、A-RTEGENフォルダの相対パス
+if [ -z "${TOPPERS_SRC+x}" ] ; then
+	TOPPERS_SRC=../../../..
+fi
 
-# A-RTEGENまでの相対パス
-RTE_PATH=../../../
+# OSソースコードまでのパス
+OS_PATH=$TOPPERS_SRC/atk2-sc1
 
-# 共通ソースコードまでの相対パス
+# A-RTEGENまでのパス
+RTE_PATH=$TOPPERS_SRC/a-rtegen
+
+# 共通ソースコードまでのパス
 GENERAL_PATH=$RTE_PATH/sample/general
 
 # ターゲット名

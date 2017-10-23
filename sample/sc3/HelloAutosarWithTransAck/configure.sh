@@ -12,7 +12,7 @@
 #  Copyright (C) 2015-2016 by Panasonic Advanced Technology Development Co., Ltd., JAPAN
 #  Copyright (C) 2015-2016 by SCSK Corporation, JAPAN
 #  Copyright (C) 2015-2016 by Sunny Giken Inc., JAPAN
-#  Copyright (C) 2015-2016 by SUZUKI MOTOR CORPORATION
+#  Copyright (C) 2015-2017 by SUZUKI MOTOR CORPORATION
 #  Copyright (C) 2015-2016 by TOSHIBA CORPORATION, JAPAN
 #  Copyright (C) 2015-2016 by Witz Corporation
 #
@@ -50,7 +50,7 @@
 #  アの利用により直接的または間接的に生じたいかなる損害に関しても，そ
 #  の責任を負わない．
 #
-# $Id: configure.sh 651 2016-03-31 06:20:22Z mtakada $
+# $Id: configure.sh 822 2017-03-15 07:20:08Z mtakada $
 #
 
 #
@@ -58,13 +58,18 @@
 # データ送信完了イベント，データ受信イベント，データ受信エラーイベント
 #
 
-# OSソースコードまでの相対パス
-OS_PATH=../../../../atk2-sc3
+# 環境変数が設定されていない場合は、A-RTEGENフォルダの相対パス
+if [ -z "${TOPPERS_SRC+x}" ] ; then
+	TOPPERS_SRC=../../../..
+fi
 
-# A-RTEGENまでの相対パス
-RTE_PATH=../../../
+# OSソースコードまでのパス
+OS_PATH=$TOPPERS_SRC/atk2-sc3
 
-# 共通ソースコードまでの相対パス
+# A-RTEGENまでのパス
+RTE_PATH=$TOPPERS_SRC/a-rtegen
+
+# 共通ソースコードまでのパス
 GENERAL_PATH=$RTE_PATH/sample/general
 
 # ターゲット名
@@ -105,26 +110,27 @@ fi
 # コード生成
 #
 
-# configureスクリプトによるMakefile作成
-perl $OS_PATH/configure -T $TARGET -A Rte $CFG_OPT \
-	-a "$GENERAL_PATH/EcuM $GENERAL_PATH/HelloAutosar $INCLUDE" \
-	-C "$APPLICATION Rte_InternalDataTypes SystemDesk" \
-	-U "$MODULE C_Init_Code.o EcuM.o EcuM_StartupTask.o Os_Hook.o" "$CMP_OPT"
-
 # ABREXによるARXMLの作成
 ruby $OS_PATH/utils/abrex/abrex.rb $APPLICATION.yaml
 
 # A-RTEGENによる必要なIOCデータ生成
 $RTE_PATH/bin/bin/rtegen.sh $OS_PATH/target/$TARGET/target_hw_counter.arxml SystemDesk.arxml $APPLICATION.arxml
 
+# Rte_GeneratedEcuc.arxmlが生成される場合は，makefileとA-RTEに追加
 if [ -e Rte_GeneratedEcuc.arxml ]
 then
-	# 信頼関数追加用ARXMLをマージのためにYAMLへ変換
-	ruby $OS_PATH/utils/abrex/abrex.rb -i Rte_GeneratedEcuc.arxml
-
-	# ABREXによりマージしたARXMLの作成
-	ruby $OS_PATH/utils/abrex/abrex.rb $APPLICATION.yaml Rte_GeneratedEcuc.yaml
+	RTE_GENERATED=Rte_GeneratedEcuc
+	RTE_GENERATED_ARXML=Rte_GeneratedEcuc.arxml
+else 
+	RTE_GENERATED=
+	RTE_GENERATED_ARXML=
 fi
 
+# configureスクリプトによるMakefile作成
+perl $OS_PATH/configure -T $TARGET -A Rte $CFG_OPT \
+	-a "$GENERAL_PATH/EcuM $GENERAL_PATH/HelloAutosar $INCLUDE" \
+	-C "$APPLICATION SystemDesk Rte_InternalDataTypes $RTE_GENERATED" \
+	-U "$MODULE C_Init_Code.o EcuM.o EcuM_StartupTask.o Os_Hook.o" "$CMP_OPT"
+
 # A-RTEGENによるA-RTEモジュール作成
-$RTE_PATH/bin/bin/rtegen.sh $OS_PATH/target/$TARGET/target_hw_counter.arxml SystemDesk.arxml $APPLICATION.arxml
+$RTE_PATH/bin/bin/rtegen.sh $OS_PATH/target/$TARGET/target_hw_counter.arxml SystemDesk.arxml $APPLICATION.arxml Rte_InternalDataTypes.arxml $RTE_GENERATED_ARXML

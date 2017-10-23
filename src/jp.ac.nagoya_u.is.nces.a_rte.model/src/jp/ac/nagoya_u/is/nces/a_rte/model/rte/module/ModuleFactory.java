@@ -802,6 +802,15 @@ public interface ModuleFactory extends EFactory {
 	TAckStatus createTAckStatus();
 
 	/**
+	 * Returns a new object of class '<em>User Defined Exclude Operation</em>'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return a new object of class '<em>User Defined Exclude Operation</em>'.
+	 * @generated
+	 */
+	UserDefinedExcludeOperation createUserDefinedExcludeOperation();
+
+	/**
 	 * Returns a new object of class '<em>Local Variable</em>'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->

@@ -14,7 +14,7 @@
 #  Copyright (C) 2013-2016 by TOSHIBA CORPORATION, JAPAN
 #  Copyright (C) 2013-2016 by Witz Corporation
 #
-#  上記著作権者は，以下の(1)～(4)の条件を満たす場合に限り，本ソフトウェ
+#  上記著作権者は，以下の(1)〜(4)の条件を満たす場合に限り，本ソフトウェ
 #  ア（本ソフトウェアを改変したものを含む．以下同じ）を使用・複製・改
 #  変・再配布（以下，利用と呼ぶ）することを無償で許諾する．
 #  (1) 本ソフトウェアをソースコードの形で利用する場合には，上記の著作
@@ -131,15 +131,6 @@ XPath.each(cAllArxmlData, "//SW-MAPPINGS/SWC-TO-ECU-MAPPING"){|cElement|
   end
 }
 
-# ECU-INSTANCEコンテナを削除
-XPath.each(cAllArxmlData, "//ELEMENTS/ECU-INSTANCE"){|cElement|
-  cElement.parent().delete_element(cElement)
-}
-
-# SWC-TO-ECU-MAPPINGコンテナを削除
-XPath.each(cAllArxmlData, "//SW-MAPPINGS/SWC-TO-ECU-MAPPING"){|cElement|
-  cElement.parent().delete_element(cElement)
-}
 
 # SWC-BSW-MAPPINGコンテナを削除
 XPath.each(cAllArxmlData, "//ELEMENTS/SWC-BSW-MAPPING"){|cElement|
@@ -151,6 +142,20 @@ cAllArxmlData.freeze()
 # ECU毎にARXMLを作成する
 hSwcOfEcu.each{|sEcu, aSwc|
   cTempXml = cAllArxmlData.deep_clone()
+
+  # 対象外のECU-INSTANCEコンテナを削除
+  XPath.each(cTempXml, "//ELEMENTS/ECU-INSTANCE"){|cElement|
+    if (!sEcu.include?(cElement.elements["SHORT-NAME"].text()))
+      cElement.parent().delete_element(cElement)
+    end
+  }
+
+  # 対象外のSWC-TO-ECU-MAPPINGコンテナを削除
+  XPath.each(cTempXml, "//SW-MAPPINGS/SWC-TO-ECU-MAPPING"){|cElement|
+    if (!cElement.elements["ECU-INSTANCE-REF"].text().include?(sEcu))
+      cElement.parent().delete_element(cElement)
+    end
+  }
 
   # 対象外のAPPLICATION-SW-COMPONENT-TYPEを削除
   XPath.each(cTempXml, "//ELEMENTS/APPLICATION-SW-COMPONENT-TYPE"){|cElement|

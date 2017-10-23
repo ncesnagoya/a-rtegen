@@ -59,6 +59,7 @@ import org.eclipse.emf.ecore.impl.ENotificationImpl;
  * The following features are implemented:
  * <ul>
  *   <li>{@link jp.ac.nagoya_u.is.nces.a_rte.model.rte.module.impl.TrustedFunctionImpl#getTrustedFunctionIndex <em>Trusted Function Index</em>}</li>
+ *   <li>{@link jp.ac.nagoya_u.is.nces.a_rte.model.rte.module.impl.TrustedFunctionImpl#getCallerOsApplicationName <em>Caller Os Application Name</em>}</li>
  * </ul>
  * </p>
  *
@@ -84,6 +85,26 @@ public abstract class TrustedFunctionImpl extends FunctionImpl implements Truste
 	 * @ordered
 	 */
 	protected String trustedFunctionIndex = TRUSTED_FUNCTION_INDEX_EDEFAULT;
+
+	/**
+	 * The default value of the '{@link #getCallerOsApplicationName() <em>Caller Os Application Name</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getCallerOsApplicationName()
+	 * @generated
+	 * @ordered
+	 */
+	protected static final String CALLER_OS_APPLICATION_NAME_EDEFAULT = null;
+
+	/**
+	 * The cached value of the '{@link #getCallerOsApplicationName() <em>Caller Os Application Name</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getCallerOsApplicationName()
+	 * @generated
+	 * @ordered
+	 */
+	protected String callerOsApplicationName = CALLER_OS_APPLICATION_NAME_EDEFAULT;
 
 	/**
 	 * <!-- begin-user-doc -->
@@ -130,11 +151,34 @@ public abstract class TrustedFunctionImpl extends FunctionImpl implements Truste
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	public String getCallerOsApplicationName() {
+		return callerOsApplicationName;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public void setCallerOsApplicationName(String newCallerOsApplicationName) {
+		String oldCallerOsApplicationName = callerOsApplicationName;
+		callerOsApplicationName = newCallerOsApplicationName;
+		if (eNotificationRequired())
+			eNotify(new ENotificationImpl(this, Notification.SET, ModulePackage.TRUSTED_FUNCTION__CALLER_OS_APPLICATION_NAME, oldCallerOsApplicationName, callerOsApplicationName));
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
 	@Override
 	public Object eGet(int featureID, boolean resolve, boolean coreType) {
 		switch (featureID) {
 			case ModulePackage.TRUSTED_FUNCTION__TRUSTED_FUNCTION_INDEX:
 				return getTrustedFunctionIndex();
+			case ModulePackage.TRUSTED_FUNCTION__CALLER_OS_APPLICATION_NAME:
+				return getCallerOsApplicationName();
 		}
 		return super.eGet(featureID, resolve, coreType);
 	}
@@ -149,6 +193,9 @@ public abstract class TrustedFunctionImpl extends FunctionImpl implements Truste
 		switch (featureID) {
 			case ModulePackage.TRUSTED_FUNCTION__TRUSTED_FUNCTION_INDEX:
 				setTrustedFunctionIndex((String)newValue);
+				return;
+			case ModulePackage.TRUSTED_FUNCTION__CALLER_OS_APPLICATION_NAME:
+				setCallerOsApplicationName((String)newValue);
 				return;
 		}
 		super.eSet(featureID, newValue);
@@ -165,6 +212,9 @@ public abstract class TrustedFunctionImpl extends FunctionImpl implements Truste
 			case ModulePackage.TRUSTED_FUNCTION__TRUSTED_FUNCTION_INDEX:
 				setTrustedFunctionIndex(TRUSTED_FUNCTION_INDEX_EDEFAULT);
 				return;
+			case ModulePackage.TRUSTED_FUNCTION__CALLER_OS_APPLICATION_NAME:
+				setCallerOsApplicationName(CALLER_OS_APPLICATION_NAME_EDEFAULT);
+				return;
 		}
 		super.eUnset(featureID);
 	}
@@ -179,6 +229,8 @@ public abstract class TrustedFunctionImpl extends FunctionImpl implements Truste
 		switch (featureID) {
 			case ModulePackage.TRUSTED_FUNCTION__TRUSTED_FUNCTION_INDEX:
 				return TRUSTED_FUNCTION_INDEX_EDEFAULT == null ? trustedFunctionIndex != null : !TRUSTED_FUNCTION_INDEX_EDEFAULT.equals(trustedFunctionIndex);
+			case ModulePackage.TRUSTED_FUNCTION__CALLER_OS_APPLICATION_NAME:
+				return CALLER_OS_APPLICATION_NAME_EDEFAULT == null ? callerOsApplicationName != null : !CALLER_OS_APPLICATION_NAME_EDEFAULT.equals(callerOsApplicationName);
 		}
 		return super.eIsSet(featureID);
 	}
@@ -195,6 +247,8 @@ public abstract class TrustedFunctionImpl extends FunctionImpl implements Truste
 		StringBuffer result = new StringBuffer(super.toString());
 		result.append(" (trustedFunctionIndex: ");
 		result.append(trustedFunctionIndex);
+		result.append(", callerOsApplicationName: ");
+		result.append(callerOsApplicationName);
 		result.append(')');
 		return result.toString();
 	}

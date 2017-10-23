@@ -2,7 +2,7 @@
  *  TOPPERS/A-RTEGEN
  *      Automotive Runtime Environment Generator
  *
- *  Copyright (C) 2013-2016 by Eiwa System Management, Inc., JAPAN
+ *  Copyright (C) 2013-2017 by Eiwa System Management, Inc., JAPAN
  *
  *  上記著作権者は，以下の(1)〜(4)の条件を満たす場合に限り，本ソフトウェ
  *  ア（本ソフトウェアを改変したものを含む．以下同じ）を使用・複製・改
@@ -175,6 +175,7 @@ public class SymbolNames { // COVERAGE 常に未達(インスタンス生成が�
 	// ローカル変数のシンボル名
 	public static final String RETURN_VALUE_LOCAL_VAR_NAME = "ercd";
 	public static final String TEMP_RETURN_VALUE_LOCAL_VAR_NAME = "tmp_ercd";
+	public static final String TEMP_RETURN_VALUE_LOCAL_VAR_NAME_FOR_TRUSTED = "tmp_tf_ercd";
 	public static final String SR_DATA_VAR_NAME = "data";
 	public static final String SR_INVALID_VALUE_VAR_NAME = "inv_val";
 	public static final String SR_FILTER_RESULT_VAR_NAME = "flt_res";
@@ -294,11 +295,6 @@ public class SymbolNames { // COVERAGE 常に未達(インスタンス生成が�
 	public static String createCsPortArgValueConstantName(PortDefinedArgumentValue sourcePortDefinedArgumentValue, int index) {
 		PortPrototype port = sourcePortDefinedArgumentValue.getParent().getPort();
 		return RTE_CONSTANT_NAME_PREFIX + "PORT_ARG_VALUE" + Identifiers.getImplExtension(port) + "_" + index;
-	}
-
-	public static String createCsPortArgValueVariableName(PortDefinedArgumentValue sourcePortDefinedArgumentValue, int index) {
-		PortPrototype port = sourcePortDefinedArgumentValue.getParent().getPort();
-		return RTE_SYMBOL_NAME_PREFIX + "CsPortArgValue" + Identifiers.getImplExtension(port) + "_" + index;
 	}
 
 	public static String createWriteApiName(PVariableDataInstanceInSwc dataInstanceInSwc) {
@@ -746,21 +742,22 @@ public class SymbolNames { // COVERAGE 常に未達(インスタンス生成が�
 	}
 
 	public static String createComSignalGroupSymbolicName(ComSignalGroup comSignalGroup) {
-		return "ComConf_ComSignal_" + comSignalGroup.getShortName();
+		return "ComConf_ComSignalGroup_" + comSignalGroup.getShortName();
 	}
 
 	public static String createComGroupSignalSymbolicName(ComGroupSignal comGroupSignal) {
+		// NOTE A-COMSTACKではComSignalとComGroupSignalを同じシグナルの命名規則で生成しているための対応
 		return "ComConf_ComSignal_" + comGroupSignal.getShortName();
 	}
 
-	public static String createComSendSignalTrustedFunctionName(EcucPartition sourceMasterBswPartition) {
+	public static String createComSendSignalTrustedFunctionName(EcucReferrable comSignalOrComSignalGroup) {
 		// NOTE 本来は信頼関数名からシンボル名を生成する設計だが、以前の実装との互換性を保つため、信頼関数名と異なるシンボル名を使用する。
-		return TRUSTED_FUNCTION_NAME_PREFIX + Identifiers.RTE_ID_PREFIX + "ComSendSignal" + "_" + sourceMasterBswPartition.getShortName();
+		return TRUSTED_FUNCTION_NAME_PREFIX + Identifiers.RTE_ID_PREFIX + "ComSendSignal" + "_" + comSignalOrComSignalGroup.getShortName();
 	}
 
-	public static String createComSendSignalGroupTrustedFunctionName(EcucPartition sourceMasterBswPartition) {
+	public static String createComSendSignalGroupTrustedFunctionName(EcucReferrable comSignalOrComSignalGroup) {
 		// NOTE 本来は信頼関数名からシンボル名を生成する設計だが、以前の実装との互換性を保つため、信頼関数名と異なるシンボル名を使用する。
-		return TRUSTED_FUNCTION_NAME_PREFIX + Identifiers.RTE_ID_PREFIX + "ComSendSignalGroup" + "_" + sourceMasterBswPartition.getShortName();
+		return TRUSTED_FUNCTION_NAME_PREFIX + Identifiers.RTE_ID_PREFIX + "ComSendSignalGroup" + "_" + comSignalOrComSignalGroup.getShortName();
 	}
 
 	public static String createComProxyFunctionName(PVariableDataInstanceInSwc dataInstanceInSwc, EcucContainer comSignalOrComSignalGroup) {
