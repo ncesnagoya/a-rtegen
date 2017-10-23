@@ -10,12 +10,6 @@ bin/lib/args4j-2.0.25.jar -text
 bin/lib/com.google.guava_14.0.1.jar -text
 bin/lib/com.ibm.icu_50.1.1.v201304230130.jar -text
 bin/lib/guava-14.0.1.jar -text
-bin/lib/jp.ac.nagoya_u.is.nces.a_rte.app_1.3.0.201603021653.jar -text
-bin/lib/jp.ac.nagoya_u.is.nces.a_rte.codegen_1.3.0.201603301508.jar -text
-bin/lib/jp.ac.nagoya_u.is.nces.a_rte.m2m_1.3.0.201603251732.jar -text
-bin/lib/jp.ac.nagoya_u.is.nces.a_rte.model_1.3.0.201601081750.jar -text
-bin/lib/jp.ac.nagoya_u.is.nces.a_rte.persist_1.3.0.201601081750.jar -text
-bin/lib/jp.ac.nagoya_u.is.nces.a_rte.validation_1.3.0.201602100940.jar -text
 bin/lib/lpg.runtime.java_2.0.17.v201004271640.jar -text
 bin/lib/org.eclipse.acceleo.common_3.4.1.201309031307.jar -text
 bin/lib/org.eclipse.acceleo.engine_3.4.1.201309031307.jar -text
