@@ -2,41 +2,41 @@
  *  TOPPERS/A-RTEGEN
  *      Automotive Runtime Environment Generator
  *
- *  Copyright (C) 2013-2015 by Eiwa System Management, Inc., JAPAN
+ *  Copyright (C) 2013-2016 by Eiwa System Management, Inc., JAPAN
  *
- *  ¾åµ­Ãøºî¸¢¼Ô¤Ï¡¤°Ê²¼¤Î(1)¡Á(4)¤Î¾ò·ï¤òËş¤¿¤¹¾ì¹ç¤Ë¸Â¤ê¡¤ËÜ¥½¥Õ¥È¥¦¥§
- *  ¥¢¡ÊËÜ¥½¥Õ¥È¥¦¥§¥¢¤ò²şÊÑ¤·¤¿¤â¤Î¤ò´Ş¤à¡¥°Ê²¼Æ±¤¸¡Ë¤ò»ÈÍÑ¡¦Ê£À½¡¦²ş
- *  ÊÑ¡¦ºÆÇÛÉÛ¡Ê°Ê²¼¡¤ÍøÍÑ¤È¸Æ¤Ö¡Ë¤¹¤ë¤³¤È¤òÌµ½ş¤ÇµöÂú¤¹¤ë¡¥
- *  (1) ËÜ¥½¥Õ¥È¥¦¥§¥¢¤ò¥½¡¼¥¹¥³¡¼¥É¤Î·Á¤ÇÍøÍÑ¤¹¤ë¾ì¹ç¤Ë¤Ï¡¤¾åµ­¤ÎÃøºî
- *      ¸¢É½¼¨¡¤¤³¤ÎÍøÍÑ¾ò·ï¤ª¤è¤Ó²¼µ­¤ÎÌµÊİ¾Úµ¬Äê¤¬¡¤¤½¤Î¤Ş¤Ş¤Î·Á¤Ç¥½¡¼
- *      ¥¹¥³¡¼¥ÉÃæ¤Ë´Ş¤Ş¤ì¤Æ¤¤¤ë¤³¤È¡¥
- *  (2) ËÜ¥½¥Õ¥È¥¦¥§¥¢¤ò¡¤¥é¥¤¥Ö¥é¥ê·Á¼°¤Ê¤É¡¤Â¾¤Î¥½¥Õ¥È¥¦¥§¥¢³«È¯¤Ë»È
- *      ÍÑ¤Ç¤­¤ë·Á¤ÇºÆÇÛÉÛ¤¹¤ë¾ì¹ç¤Ë¤Ï¡¤ºÆÇÛÉÛ¤ËÈ¼¤¦¥É¥­¥å¥á¥ó¥È¡ÊÍøÍÑ
- *      ¼Ô¥Ş¥Ë¥å¥¢¥ë¤Ê¤É¡Ë¤Ë¡¤¾åµ­¤ÎÃøºî¸¢É½¼¨¡¤¤³¤ÎÍøÍÑ¾ò·ï¤ª¤è¤Ó²¼µ­
- *      ¤ÎÌµÊİ¾Úµ¬Äê¤ò·ÇºÜ¤¹¤ë¤³¤È¡¥
- *  (3) ËÜ¥½¥Õ¥È¥¦¥§¥¢¤ò¡¤µ¡´ï¤ËÁÈ¤ß¹ş¤à¤Ê¤É¡¤Â¾¤Î¥½¥Õ¥È¥¦¥§¥¢³«È¯¤Ë»È
- *      ÍÑ¤Ç¤­¤Ê¤¤·Á¤ÇºÆÇÛÉÛ¤¹¤ë¾ì¹ç¤Ë¤Ï¡¤¼¡¤Î¤¤¤º¤ì¤«¤Î¾ò·ï¤òËş¤¿¤¹¤³
- *      ¤È¡¥
- *    (a) ºÆÇÛÉÛ¤ËÈ¼¤¦¥É¥­¥å¥á¥ó¥È¡ÊÍøÍÑ¼Ô¥Ş¥Ë¥å¥¢¥ë¤Ê¤É¡Ë¤Ë¡¤¾åµ­¤ÎÃø
- *        ºî¸¢É½¼¨¡¤¤³¤ÎÍøÍÑ¾ò·ï¤ª¤è¤Ó²¼µ­¤ÎÌµÊİ¾Úµ¬Äê¤ò·ÇºÜ¤¹¤ë¤³¤È¡¥
- *    (b) ºÆÇÛÉÛ¤Î·ÁÂÖ¤ò¡¤ÊÌ¤ËÄê¤á¤ëÊıË¡¤Ë¤è¤Ã¤Æ¡¤TOPPERS¥×¥í¥¸¥§¥¯¥È¤Ë
- *        Êó¹ğ¤¹¤ë¤³¤È¡¥
- *  (4) ËÜ¥½¥Õ¥È¥¦¥§¥¢¤ÎÍøÍÑ¤Ë¤è¤êÄ¾ÀÜÅª¤Ş¤¿¤Ï´ÖÀÜÅª¤ËÀ¸¤¸¤ë¤¤¤«¤Ê¤ëÂ»
- *      ³²¤«¤é¤â¡¤¾åµ­Ãøºî¸¢¼Ô¤ª¤è¤ÓTOPPERS¥×¥í¥¸¥§¥¯¥È¤òÌÈÀÕ¤¹¤ë¤³¤È¡¥
- *      ¤Ş¤¿¡¤ËÜ¥½¥Õ¥È¥¦¥§¥¢¤Î¥æ¡¼¥¶¤Ş¤¿¤Ï¥¨¥ó¥É¥æ¡¼¥¶¤«¤é¤Î¤¤¤«¤Ê¤ëÍı
- *      Í³¤Ë´ğ¤Å¤¯ÀÁµá¤«¤é¤â¡¤¾åµ­Ãøºî¸¢¼Ô¤ª¤è¤ÓTOPPERS¥×¥í¥¸¥§¥¯¥È¤ò
- *      ÌÈÀÕ¤¹¤ë¤³¤È¡¥
+ *  ä¸Šè¨˜è‘—ä½œæ¨©è€…ã¯ï¼Œä»¥ä¸‹ã®(1)ã€œ(4)ã®æ¡ä»¶ã‚’æº€ãŸã™å ´åˆã«é™ã‚Šï¼Œæœ¬ã‚½ãƒ•ãƒˆã‚¦ã‚§
+ *  ã‚¢ï¼ˆæœ¬ã‚½ãƒ•ãƒˆã‚¦ã‚§ã‚¢ã‚’æ”¹å¤‰ã—ãŸã‚‚ã®ã‚’å«ã‚€ï¼ä»¥ä¸‹åŒã˜ï¼‰ã‚’ä½¿ç”¨ãƒ»è¤‡è£½ãƒ»æ”¹
+ *  å¤‰ãƒ»å†é…å¸ƒï¼ˆä»¥ä¸‹ï¼Œåˆ©ç”¨ã¨å‘¼ã¶ï¼‰ã™ã‚‹ã“ã¨ã‚’ç„¡å„Ÿã§è¨±è«¾ã™ã‚‹ï¼
+ *  (1) æœ¬ã‚½ãƒ•ãƒˆã‚¦ã‚§ã‚¢ã‚’ã‚½ãƒ¼ã‚¹ã‚³ãƒ¼ãƒ‰ã®å½¢ã§åˆ©ç”¨ã™ã‚‹å ´åˆã«ã¯ï¼Œä¸Šè¨˜ã®è‘—ä½œ
+ *      æ¨©è¡¨ç¤ºï¼Œã“ã®åˆ©ç”¨æ¡ä»¶ãŠã‚ˆã³ä¸‹è¨˜ã®ç„¡ä¿è¨¼è¦å®šãŒï¼Œãã®ã¾ã¾ã®å½¢ã§ã‚½ãƒ¼
+ *      ã‚¹ã‚³ãƒ¼ãƒ‰ä¸­ã«å«ã¾ã‚Œã¦ã„ã‚‹ã“ã¨ï¼
+ *  (2) æœ¬ã‚½ãƒ•ãƒˆã‚¦ã‚§ã‚¢ã‚’ï¼Œãƒ©ã‚¤ãƒ–ãƒ©ãƒªå½¢å¼ãªã©ï¼Œä»–ã®ã‚½ãƒ•ãƒˆã‚¦ã‚§ã‚¢é–‹ç™ºã«ä½¿
+ *      ç”¨ã§ãã‚‹å½¢ã§å†é…å¸ƒã™ã‚‹å ´åˆã«ã¯ï¼Œå†é…å¸ƒã«ä¼´ã†ãƒ‰ã‚­ãƒ¥ãƒ¡ãƒ³ãƒˆï¼ˆåˆ©ç”¨
+ *      è€…ãƒãƒ‹ãƒ¥ã‚¢ãƒ«ãªã©ï¼‰ã«ï¼Œä¸Šè¨˜ã®è‘—ä½œæ¨©è¡¨ç¤ºï¼Œã“ã®åˆ©ç”¨æ¡ä»¶ãŠã‚ˆã³ä¸‹è¨˜
+ *      ã®ç„¡ä¿è¨¼è¦å®šã‚’æ²è¼‰ã™ã‚‹ã“ã¨ï¼
+ *  (3) æœ¬ã‚½ãƒ•ãƒˆã‚¦ã‚§ã‚¢ã‚’ï¼Œæ©Ÿå™¨ã«çµ„ã¿è¾¼ã‚€ãªã©ï¼Œä»–ã®ã‚½ãƒ•ãƒˆã‚¦ã‚§ã‚¢é–‹ç™ºã«ä½¿
+ *      ç”¨ã§ããªã„å½¢ã§å†é…å¸ƒã™ã‚‹å ´åˆã«ã¯ï¼Œæ¬¡ã®ã„ãšã‚Œã‹ã®æ¡ä»¶ã‚’æº€ãŸã™ã“
+ *      ã¨ï¼
+ *    (a) å†é…å¸ƒã«ä¼´ã†ãƒ‰ã‚­ãƒ¥ãƒ¡ãƒ³ãƒˆï¼ˆåˆ©ç”¨è€…ãƒãƒ‹ãƒ¥ã‚¢ãƒ«ãªã©ï¼‰ã«ï¼Œä¸Šè¨˜ã®è‘—
+ *        ä½œæ¨©è¡¨ç¤ºï¼Œã“ã®åˆ©ç”¨æ¡ä»¶ãŠã‚ˆã³ä¸‹è¨˜ã®ç„¡ä¿è¨¼è¦å®šã‚’æ²è¼‰ã™ã‚‹ã“ã¨ï¼
+ *    (b) å†é…å¸ƒã®å½¢æ…‹ã‚’ï¼Œåˆ¥ã«å®šã‚ã‚‹æ–¹æ³•ã«ã‚ˆã£ã¦ï¼ŒTOPPERSãƒ—ãƒ­ã‚¸ã‚§ã‚¯ãƒˆã«
+ *        å ±å‘Šã™ã‚‹ã“ã¨ï¼
+ *  (4) æœ¬ã‚½ãƒ•ãƒˆã‚¦ã‚§ã‚¢ã®åˆ©ç”¨ã«ã‚ˆã‚Šç›´æ¥çš„ã¾ãŸã¯é–“æ¥çš„ã«ç”Ÿã˜ã‚‹ã„ã‹ãªã‚‹æ
+ *      å®³ã‹ã‚‰ã‚‚ï¼Œä¸Šè¨˜è‘—ä½œæ¨©è€…ãŠã‚ˆã³TOPPERSãƒ—ãƒ­ã‚¸ã‚§ã‚¯ãƒˆã‚’å…è²¬ã™ã‚‹ã“ã¨ï¼
+ *      ã¾ãŸï¼Œæœ¬ã‚½ãƒ•ãƒˆã‚¦ã‚§ã‚¢ã®ãƒ¦ãƒ¼ã‚¶ã¾ãŸã¯ã‚¨ãƒ³ãƒ‰ãƒ¦ãƒ¼ã‚¶ã‹ã‚‰ã®ã„ã‹ãªã‚‹ç†
+ *      ç”±ã«åŸºã¥ãè«‹æ±‚ã‹ã‚‰ã‚‚ï¼Œä¸Šè¨˜è‘—ä½œæ¨©è€…ãŠã‚ˆã³TOPPERSãƒ—ãƒ­ã‚¸ã‚§ã‚¯ãƒˆã‚’
+ *      å…è²¬ã™ã‚‹ã“ã¨ï¼
  *
- *  ËÜ¥½¥Õ¥È¥¦¥§¥¢¤Ï¡¤AUTOSAR¡ÊAUTomotive Open System ARchitecture¡Ë»Å
- *  ÍÍ¤Ë´ğ¤Å¤¤¤Æ¤¤¤ë¡¥¾åµ­¤ÎµöÂú¤Ï¡¤AUTOSAR¤ÎÃÎÅªºâ»º¸¢¤òµöÂú¤¹¤ë¤â¤Î¤Ç
- *  ¤Ï¤Ê¤¤¡¥AUTOSAR¤Ï¡¤AUTOSAR»ÅÍÍ¤Ë´ğ¤Å¤¤¤¿¥½¥Õ¥È¥¦¥§¥¢¤ò¾¦ÍÑÌÜÅª¤ÇÍø
- *  ÍÑ¤¹¤ë¼Ô¤ËÂĞ¤·¤Æ¡¤AUTOSAR¥Ñ¡¼¥È¥Ê¡¼¤Ë¤Ê¤ë¤³¤È¤òµá¤á¤Æ¤¤¤ë¡¥
+ *  æœ¬ã‚½ãƒ•ãƒˆã‚¦ã‚§ã‚¢ã¯ï¼ŒAUTOSARï¼ˆAUTomotive Open System ARchitectureï¼‰ä»•
+ *  æ§˜ã«åŸºã¥ã„ã¦ã„ã‚‹ï¼ä¸Šè¨˜ã®è¨±è«¾ã¯ï¼ŒAUTOSARã®çŸ¥çš„è²¡ç”£æ¨©ã‚’è¨±è«¾ã™ã‚‹ã‚‚ã®ã§
+ *  ã¯ãªã„ï¼AUTOSARã¯ï¼ŒAUTOSARä»•æ§˜ã«åŸºã¥ã„ãŸã‚½ãƒ•ãƒˆã‚¦ã‚§ã‚¢ã‚’å•†ç”¨ç›®çš„ã§åˆ©
+ *  ç”¨ã™ã‚‹è€…ã«å¯¾ã—ã¦ï¼ŒAUTOSARãƒ‘ãƒ¼ãƒˆãƒŠãƒ¼ã«ãªã‚‹ã“ã¨ã‚’æ±‚ã‚ã¦ã„ã‚‹ï¼
  *
- *  ËÜ¥½¥Õ¥È¥¦¥§¥¢¤Ï¡¤ÌµÊİ¾Ú¤ÇÄó¶¡¤µ¤ì¤Æ¤¤¤ë¤â¤Î¤Ç¤¢¤ë¡¥¾åµ­Ãøºî¸¢¼Ô¤ª
- *  ¤è¤ÓTOPPERS¥×¥í¥¸¥§¥¯¥È¤Ï¡¤ËÜ¥½¥Õ¥È¥¦¥§¥¢¤Ë´Ø¤·¤Æ¡¤ÆÃÄê¤Î»ÈÍÑÌÜÅª
- *  ¤ËÂĞ¤¹¤ëÅ¬¹çÀ­¤â´Ş¤á¤Æ¡¤¤¤¤«¤Ê¤ëÊİ¾Ú¤â¹Ô¤ï¤Ê¤¤¡¥¤Ş¤¿¡¤ËÜ¥½¥Õ¥È¥¦¥§
- *  ¥¢¤ÎÍøÍÑ¤Ë¤è¤êÄ¾ÀÜÅª¤Ş¤¿¤Ï´ÖÀÜÅª¤ËÀ¸¤¸¤¿¤¤¤«¤Ê¤ëÂ»³²¤Ë´Ø¤·¤Æ¤â¡¤¤½
- *  ¤ÎÀÕÇ¤¤òÉé¤ï¤Ê¤¤¡¥
+ *  æœ¬ã‚½ãƒ•ãƒˆã‚¦ã‚§ã‚¢ã¯ï¼Œç„¡ä¿è¨¼ã§æä¾›ã•ã‚Œã¦ã„ã‚‹ã‚‚ã®ã§ã‚ã‚‹ï¼ä¸Šè¨˜è‘—ä½œæ¨©è€…ãŠ
+ *  ã‚ˆã³TOPPERSãƒ—ãƒ­ã‚¸ã‚§ã‚¯ãƒˆã¯ï¼Œæœ¬ã‚½ãƒ•ãƒˆã‚¦ã‚§ã‚¢ã«é–¢ã—ã¦ï¼Œç‰¹å®šã®ä½¿ç”¨ç›®çš„
+ *  ã«å¯¾ã™ã‚‹é©åˆæ€§ã‚‚å«ã‚ã¦ï¼Œã„ã‹ãªã‚‹ä¿è¨¼ã‚‚è¡Œã‚ãªã„ï¼ã¾ãŸï¼Œæœ¬ã‚½ãƒ•ãƒˆã‚¦ã‚§
+ *  ã‚¢ã®åˆ©ç”¨ã«ã‚ˆã‚Šç›´æ¥çš„ã¾ãŸã¯é–“æ¥çš„ã«ç”Ÿã˜ãŸã„ã‹ãªã‚‹æå®³ã«é–¢ã—ã¦ã‚‚ï¼Œã
+ *  ã®è²¬ä»»ã‚’è² ã‚ãªã„ï¼
  *
  *  $Id $
  */
@@ -64,7 +64,8 @@ import jp.ac.nagoya_u.is.nces.a_rte.model.rte.module.OsApi;
 import jp.ac.nagoya_u.is.nces.a_rte.model.rte.module.Rte;
 import jp.ac.nagoya_u.is.nces.a_rte.model.rte.module.RteBufferQueueType;
 import jp.ac.nagoya_u.is.nces.a_rte.model.rte.module.RteBufferVariableSet;
-import jp.ac.nagoya_u.is.nces.a_rte.model.rte.module.RteSendTrustedFunctionParamType;
+import jp.ac.nagoya_u.is.nces.a_rte.model.rte.module.RteNonqueuedSendTrustedFunctionParamType;
+import jp.ac.nagoya_u.is.nces.a_rte.model.rte.module.RteQueuedSendTrustedFunctionParamType;
 import jp.ac.nagoya_u.is.nces.a_rte.model.rte.module.RteStartApi;
 import jp.ac.nagoya_u.is.nces.a_rte.model.rte.module.RteStopApi;
 import jp.ac.nagoya_u.is.nces.a_rte.model.rte.module.SchmDeinitApi;
@@ -101,7 +102,8 @@ import org.eclipse.emf.ecore.util.InternalEList;
  *   <li>{@link jp.ac.nagoya_u.is.nces.a_rte.model.rte.module.impl.RteImpl#getComSendSignalTfParamType <em>Com Send Signal Tf Param Type</em>}</li>
  *   <li>{@link jp.ac.nagoya_u.is.nces.a_rte.model.rte.module.impl.RteImpl#getComSendSignalGroupTfParamType <em>Com Send Signal Group Tf Param Type</em>}</li>
  *   <li>{@link jp.ac.nagoya_u.is.nces.a_rte.model.rte.module.impl.RteImpl#getCsTfParamType <em>Cs Tf Param Type</em>}</li>
- *   <li>{@link jp.ac.nagoya_u.is.nces.a_rte.model.rte.module.impl.RteImpl#getSrRteSendTfParamType <em>Sr Rte Send Tf Param Type</em>}</li>
+ *   <li>{@link jp.ac.nagoya_u.is.nces.a_rte.model.rte.module.impl.RteImpl#getSrRteNonqueuedSendTfParamType <em>Sr Rte Nonqueued Send Tf Param Type</em>}</li>
+ *   <li>{@link jp.ac.nagoya_u.is.nces.a_rte.model.rte.module.impl.RteImpl#getSrRteQueuedSendTfParamType <em>Sr Rte Queued Send Tf Param Type</em>}</li>
  *   <li>{@link jp.ac.nagoya_u.is.nces.a_rte.model.rte.module.impl.RteImpl#getSrRteBufferQueueMaxLengthConstant <em>Sr Rte Buffer Queue Max Length Constant</em>}</li>
  *   <li>{@link jp.ac.nagoya_u.is.nces.a_rte.model.rte.module.impl.RteImpl#getSrRteBufferQueueType <em>Sr Rte Buffer Queue Type</em>}</li>
  *   <li>{@link jp.ac.nagoya_u.is.nces.a_rte.model.rte.module.impl.RteImpl#getImmediateConstant <em>Immediate Constant</em>}</li>
@@ -271,14 +273,24 @@ public class RteImpl extends LogicalCompartmentImpl implements Rte {
 	protected EList<CsTrustedFunctionParamType> csTfParamType;
 
 	/**
-	 * The cached value of the '{@link #getSrRteSendTfParamType() <em>Sr Rte Send Tf Param Type</em>}' containment reference.
+	 * The cached value of the '{@link #getSrRteNonqueuedSendTfParamType() <em>Sr Rte Nonqueued Send Tf Param Type</em>}' containment reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @see #getSrRteSendTfParamType()
+	 * @see #getSrRteNonqueuedSendTfParamType()
 	 * @generated
 	 * @ordered
 	 */
-	protected RteSendTrustedFunctionParamType srRteSendTfParamType;
+	protected RteNonqueuedSendTrustedFunctionParamType srRteNonqueuedSendTfParamType;
+
+	/**
+	 * The cached value of the '{@link #getSrRteQueuedSendTfParamType() <em>Sr Rte Queued Send Tf Param Type</em>}' containment reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getSrRteQueuedSendTfParamType()
+	 * @generated
+	 * @ordered
+	 */
+	protected RteQueuedSendTrustedFunctionParamType srRteQueuedSendTfParamType;
 
 	/**
 	 * The cached value of the '{@link #getSrRteBufferQueueMaxLengthConstant() <em>Sr Rte Buffer Queue Max Length Constant</em>}' containment reference list.
@@ -893,8 +905,8 @@ public class RteImpl extends LogicalCompartmentImpl implements Rte {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public RteSendTrustedFunctionParamType getSrRteSendTfParamType() {
-		return srRteSendTfParamType;
+	public RteNonqueuedSendTrustedFunctionParamType getSrRteNonqueuedSendTfParamType() {
+		return srRteNonqueuedSendTfParamType;
 	}
 
 	/**
@@ -902,11 +914,11 @@ public class RteImpl extends LogicalCompartmentImpl implements Rte {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public NotificationChain basicSetSrRteSendTfParamType(RteSendTrustedFunctionParamType newSrRteSendTfParamType, NotificationChain msgs) {
-		RteSendTrustedFunctionParamType oldSrRteSendTfParamType = srRteSendTfParamType;
-		srRteSendTfParamType = newSrRteSendTfParamType;
+	public NotificationChain basicSetSrRteNonqueuedSendTfParamType(RteNonqueuedSendTrustedFunctionParamType newSrRteNonqueuedSendTfParamType, NotificationChain msgs) {
+		RteNonqueuedSendTrustedFunctionParamType oldSrRteNonqueuedSendTfParamType = srRteNonqueuedSendTfParamType;
+		srRteNonqueuedSendTfParamType = newSrRteNonqueuedSendTfParamType;
 		if (eNotificationRequired()) {
-			ENotificationImpl notification = new ENotificationImpl(this, Notification.SET, ModulePackage.RTE__SR_RTE_SEND_TF_PARAM_TYPE, oldSrRteSendTfParamType, newSrRteSendTfParamType);
+			ENotificationImpl notification = new ENotificationImpl(this, Notification.SET, ModulePackage.RTE__SR_RTE_NONQUEUED_SEND_TF_PARAM_TYPE, oldSrRteNonqueuedSendTfParamType, newSrRteNonqueuedSendTfParamType);
 			if (msgs == null) msgs = notification; else msgs.add(notification);
 		}
 		return msgs;
@@ -917,18 +929,61 @@ public class RteImpl extends LogicalCompartmentImpl implements Rte {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public void setSrRteSendTfParamType(RteSendTrustedFunctionParamType newSrRteSendTfParamType) {
-		if (newSrRteSendTfParamType != srRteSendTfParamType) {
+	public void setSrRteNonqueuedSendTfParamType(RteNonqueuedSendTrustedFunctionParamType newSrRteNonqueuedSendTfParamType) {
+		if (newSrRteNonqueuedSendTfParamType != srRteNonqueuedSendTfParamType) {
 			NotificationChain msgs = null;
-			if (srRteSendTfParamType != null)
-				msgs = ((InternalEObject)srRteSendTfParamType).eInverseRemove(this, EOPPOSITE_FEATURE_BASE - ModulePackage.RTE__SR_RTE_SEND_TF_PARAM_TYPE, null, msgs);
-			if (newSrRteSendTfParamType != null)
-				msgs = ((InternalEObject)newSrRteSendTfParamType).eInverseAdd(this, EOPPOSITE_FEATURE_BASE - ModulePackage.RTE__SR_RTE_SEND_TF_PARAM_TYPE, null, msgs);
-			msgs = basicSetSrRteSendTfParamType(newSrRteSendTfParamType, msgs);
+			if (srRteNonqueuedSendTfParamType != null)
+				msgs = ((InternalEObject)srRteNonqueuedSendTfParamType).eInverseRemove(this, EOPPOSITE_FEATURE_BASE - ModulePackage.RTE__SR_RTE_NONQUEUED_SEND_TF_PARAM_TYPE, null, msgs);
+			if (newSrRteNonqueuedSendTfParamType != null)
+				msgs = ((InternalEObject)newSrRteNonqueuedSendTfParamType).eInverseAdd(this, EOPPOSITE_FEATURE_BASE - ModulePackage.RTE__SR_RTE_NONQUEUED_SEND_TF_PARAM_TYPE, null, msgs);
+			msgs = basicSetSrRteNonqueuedSendTfParamType(newSrRteNonqueuedSendTfParamType, msgs);
 			if (msgs != null) msgs.dispatch();
 		}
 		else if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, ModulePackage.RTE__SR_RTE_SEND_TF_PARAM_TYPE, newSrRteSendTfParamType, newSrRteSendTfParamType));
+			eNotify(new ENotificationImpl(this, Notification.SET, ModulePackage.RTE__SR_RTE_NONQUEUED_SEND_TF_PARAM_TYPE, newSrRteNonqueuedSendTfParamType, newSrRteNonqueuedSendTfParamType));
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public RteQueuedSendTrustedFunctionParamType getSrRteQueuedSendTfParamType() {
+		return srRteQueuedSendTfParamType;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public NotificationChain basicSetSrRteQueuedSendTfParamType(RteQueuedSendTrustedFunctionParamType newSrRteQueuedSendTfParamType, NotificationChain msgs) {
+		RteQueuedSendTrustedFunctionParamType oldSrRteQueuedSendTfParamType = srRteQueuedSendTfParamType;
+		srRteQueuedSendTfParamType = newSrRteQueuedSendTfParamType;
+		if (eNotificationRequired()) {
+			ENotificationImpl notification = new ENotificationImpl(this, Notification.SET, ModulePackage.RTE__SR_RTE_QUEUED_SEND_TF_PARAM_TYPE, oldSrRteQueuedSendTfParamType, newSrRteQueuedSendTfParamType);
+			if (msgs == null) msgs = notification; else msgs.add(notification);
+		}
+		return msgs;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public void setSrRteQueuedSendTfParamType(RteQueuedSendTrustedFunctionParamType newSrRteQueuedSendTfParamType) {
+		if (newSrRteQueuedSendTfParamType != srRteQueuedSendTfParamType) {
+			NotificationChain msgs = null;
+			if (srRteQueuedSendTfParamType != null)
+				msgs = ((InternalEObject)srRteQueuedSendTfParamType).eInverseRemove(this, EOPPOSITE_FEATURE_BASE - ModulePackage.RTE__SR_RTE_QUEUED_SEND_TF_PARAM_TYPE, null, msgs);
+			if (newSrRteQueuedSendTfParamType != null)
+				msgs = ((InternalEObject)newSrRteQueuedSendTfParamType).eInverseAdd(this, EOPPOSITE_FEATURE_BASE - ModulePackage.RTE__SR_RTE_QUEUED_SEND_TF_PARAM_TYPE, null, msgs);
+			msgs = basicSetSrRteQueuedSendTfParamType(newSrRteQueuedSendTfParamType, msgs);
+			if (msgs != null) msgs.dispatch();
+		}
+		else if (eNotificationRequired())
+			eNotify(new ENotificationImpl(this, Notification.SET, ModulePackage.RTE__SR_RTE_QUEUED_SEND_TF_PARAM_TYPE, newSrRteQueuedSendTfParamType, newSrRteQueuedSendTfParamType));
 	}
 
 	/**
@@ -1134,8 +1189,10 @@ public class RteImpl extends LogicalCompartmentImpl implements Rte {
 				return basicSetComSendSignalGroupTfParamType(null, msgs);
 			case ModulePackage.RTE__CS_TF_PARAM_TYPE:
 				return ((InternalEList<?>)getCsTfParamType()).basicRemove(otherEnd, msgs);
-			case ModulePackage.RTE__SR_RTE_SEND_TF_PARAM_TYPE:
-				return basicSetSrRteSendTfParamType(null, msgs);
+			case ModulePackage.RTE__SR_RTE_NONQUEUED_SEND_TF_PARAM_TYPE:
+				return basicSetSrRteNonqueuedSendTfParamType(null, msgs);
+			case ModulePackage.RTE__SR_RTE_QUEUED_SEND_TF_PARAM_TYPE:
+				return basicSetSrRteQueuedSendTfParamType(null, msgs);
 			case ModulePackage.RTE__SR_RTE_BUFFER_QUEUE_MAX_LENGTH_CONSTANT:
 				return ((InternalEList<?>)getSrRteBufferQueueMaxLengthConstant()).basicRemove(otherEnd, msgs);
 			case ModulePackage.RTE__SR_RTE_BUFFER_QUEUE_TYPE:
@@ -1202,8 +1259,10 @@ public class RteImpl extends LogicalCompartmentImpl implements Rte {
 				return getComSendSignalGroupTfParamType();
 			case ModulePackage.RTE__CS_TF_PARAM_TYPE:
 				return getCsTfParamType();
-			case ModulePackage.RTE__SR_RTE_SEND_TF_PARAM_TYPE:
-				return getSrRteSendTfParamType();
+			case ModulePackage.RTE__SR_RTE_NONQUEUED_SEND_TF_PARAM_TYPE:
+				return getSrRteNonqueuedSendTfParamType();
+			case ModulePackage.RTE__SR_RTE_QUEUED_SEND_TF_PARAM_TYPE:
+				return getSrRteQueuedSendTfParamType();
 			case ModulePackage.RTE__SR_RTE_BUFFER_QUEUE_MAX_LENGTH_CONSTANT:
 				return getSrRteBufferQueueMaxLengthConstant();
 			case ModulePackage.RTE__SR_RTE_BUFFER_QUEUE_TYPE:
@@ -1298,8 +1357,11 @@ public class RteImpl extends LogicalCompartmentImpl implements Rte {
 				getCsTfParamType().clear();
 				getCsTfParamType().addAll((Collection<? extends CsTrustedFunctionParamType>)newValue);
 				return;
-			case ModulePackage.RTE__SR_RTE_SEND_TF_PARAM_TYPE:
-				setSrRteSendTfParamType((RteSendTrustedFunctionParamType)newValue);
+			case ModulePackage.RTE__SR_RTE_NONQUEUED_SEND_TF_PARAM_TYPE:
+				setSrRteNonqueuedSendTfParamType((RteNonqueuedSendTrustedFunctionParamType)newValue);
+				return;
+			case ModulePackage.RTE__SR_RTE_QUEUED_SEND_TF_PARAM_TYPE:
+				setSrRteQueuedSendTfParamType((RteQueuedSendTrustedFunctionParamType)newValue);
 				return;
 			case ModulePackage.RTE__SR_RTE_BUFFER_QUEUE_MAX_LENGTH_CONSTANT:
 				getSrRteBufferQueueMaxLengthConstant().clear();
@@ -1399,8 +1461,11 @@ public class RteImpl extends LogicalCompartmentImpl implements Rte {
 			case ModulePackage.RTE__CS_TF_PARAM_TYPE:
 				getCsTfParamType().clear();
 				return;
-			case ModulePackage.RTE__SR_RTE_SEND_TF_PARAM_TYPE:
-				setSrRteSendTfParamType((RteSendTrustedFunctionParamType)null);
+			case ModulePackage.RTE__SR_RTE_NONQUEUED_SEND_TF_PARAM_TYPE:
+				setSrRteNonqueuedSendTfParamType((RteNonqueuedSendTrustedFunctionParamType)null);
+				return;
+			case ModulePackage.RTE__SR_RTE_QUEUED_SEND_TF_PARAM_TYPE:
+				setSrRteQueuedSendTfParamType((RteQueuedSendTrustedFunctionParamType)null);
 				return;
 			case ModulePackage.RTE__SR_RTE_BUFFER_QUEUE_MAX_LENGTH_CONSTANT:
 				getSrRteBufferQueueMaxLengthConstant().clear();
@@ -1480,8 +1545,10 @@ public class RteImpl extends LogicalCompartmentImpl implements Rte {
 				return comSendSignalGroupTfParamType != null;
 			case ModulePackage.RTE__CS_TF_PARAM_TYPE:
 				return csTfParamType != null && !csTfParamType.isEmpty();
-			case ModulePackage.RTE__SR_RTE_SEND_TF_PARAM_TYPE:
-				return srRteSendTfParamType != null;
+			case ModulePackage.RTE__SR_RTE_NONQUEUED_SEND_TF_PARAM_TYPE:
+				return srRteNonqueuedSendTfParamType != null;
+			case ModulePackage.RTE__SR_RTE_QUEUED_SEND_TF_PARAM_TYPE:
+				return srRteQueuedSendTfParamType != null;
 			case ModulePackage.RTE__SR_RTE_BUFFER_QUEUE_MAX_LENGTH_CONSTANT:
 				return srRteBufferQueueMaxLengthConstant != null && !srRteBufferQueueMaxLengthConstant.isEmpty();
 			case ModulePackage.RTE__SR_RTE_BUFFER_QUEUE_TYPE:
